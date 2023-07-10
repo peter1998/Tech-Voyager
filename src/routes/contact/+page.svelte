@@ -16,3 +16,29 @@
 <p>Email: [Your Email]</p>
 <p>LinkedIn: [Your LinkedIn]</p>
 <p>GitHub: [Your GitHub]</p>
+
+<style>
+	nav {
+		display: flex;
+		justify-content: space-around;
+		background-color: #333;
+		color: #fff;
+		padding: 10px;
+	}
+
+	nav a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	a {
+		display: inline-block;
+		margin-top: 10px;
+		padding: 10px 20px;
+		background-color: #333;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 5px;
+		margin-right: 10px;
+	}
+</style>
