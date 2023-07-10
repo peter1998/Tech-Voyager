@@ -3,14 +3,14 @@
 
 	let i = 0;
 	let txts = [
-		"I'm Peter Matov, a software engineer and data scientist. ",
-		'I specialize in developing high-performance applications ',
-		'and leveraging data to drive business outcomes. ',
-		'Welcome to my personal website where you can learn more ',
-		'about my projects, skills and interests. '
+		"I'm Peter Matov, a software engineer and data scientist.",
+		'I specialize in developing high-performance applications',
+		'and leveraging data to drive business outcomes.',
+		'Welcome to my personal website where you can learn more',
+		'about my projects, skills and interests.'
 	];
 	let txtIndex = 0;
-	let speed = 77; /* The speed/duration of the effect in milliseconds */
+	let speed = 60; /* The speed/duration of the effect in milliseconds */
 
 	function typeWriter() {
 		const demoElement = document.getElementById('demo');
@@ -33,7 +33,7 @@
 
 <header class="flex justify-around bg-gray-800 p-6 text-white">
 	<a href="/" class="hover:text-gray-300">
-		<img src="/logo.png" alt="Logo" class="h-8 w-auto sm:h-10" />
+		<img src="/public/images/logo.PNG" alt="Logo" class="logo-image" />
 	</a>
 	<nav>
 		<a href="/" class="hover:text-gray-300">Home</a>
@@ -48,17 +48,19 @@
 </header>
 
 <main>
-	<section class="hero text-center py-20">
+	<section
+		class="hero text-center py-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white"
+	>
 		<h1 class="text-4xl mb-4">Hello, I'm Peter Matov</h1>
 		<div class="typing-container text-xl mb-8 mx-auto">
 			<p id="demo" />
 		</div>
-		<a href="/projects" class="cta bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
+		<a href="/projects" class="cta bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200"
 			>View My Projects</a
 		>
 	</section>
 
-	<section class="skills text-center py-20">
+	<section class="skills text-center py-20 bg-gray-800 text-white">
 		<h2 class="text-3xl mb-4">My Skills</h2>
 		<ul class="list-none p-0">
 			<li class="mb-2">Software Engineering</li>
@@ -67,17 +69,17 @@
 		</ul>
 	</section>
 
-	<section class="projects text-center py-20">
+	<section class="projects text-center py-20 bg-gray-900 text-white">
 		<h2 class="text-3xl mb-4">Recent Projects</h2>
 		<!-- We'll add code to display your projects here later -->
 	</section>
 
-	<section class="cta text-center py-20">
+	<section class="cta text-center py-20 bg-gray-800 text-white">
 		<h2 class="text-3xl mb-4">Interested in working together?</h2>
-		<a href="/contact" class="cta bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 mr-4"
+		<a href="/contact" class="cta bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200 mr-4"
 			>Contact Me</a
 		>
-		<a href="/cv" class="cta bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
+		<a href="/cv" class="cta bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200"
 			>View My CV</a
 		>
 	</section>
@@ -90,6 +92,10 @@
 </footer>
 
 <style>
+	body {
+		background-color: #1a202c;
+	}
+
 	header,
 	footer {
 		display: flex;
@@ -137,5 +143,10 @@
 	.cta:hover {
 		transform: scale(1.05);
 		transition: transform 0.3s ease-in-out;
+	}
+
+	.logo-image {
+		height: 100px;
+		width: auto;
 	}
 </style>
