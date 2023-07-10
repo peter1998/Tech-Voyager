@@ -11,6 +11,7 @@
 	];
 	let txtIndex = 0;
 	let speed = 90; /* The speed/duration of the effect in milliseconds */
+	let loading = true;
 
 	function typeWriter() {
 		const demoElement = document.getElementById('demo');
@@ -28,8 +29,15 @@
 		}
 	}
 
-	onMount(typeWriter);
+	onMount(() => {
+		setTimeout(() => {
+			loading = false;
+			typeWriter();
+		}, 2000); // delay for 2 seconds to simulate loading
+	});
 </script>
+
+<div class="loader" style="display: {loading ? 'block' : 'none'};" />
 
 <header class="flex justify-around bg-gray-800 p-6 text-white">
 	<a href="/" class="hover:text-gray-300">
@@ -42,7 +50,7 @@
 		<a href="/cv" class="hover:text-gray-300">CV</a>
 		<a href="/contact" class="hover:text-gray-300">Contact</a>
 	</nav>
-	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300"
+	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
 		>(359) 0888187905</a
 	>
 </header>
@@ -130,7 +138,7 @@
 </main>
 
 <footer class="text-center py-6 bg-gray-800 text-white">
-	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300"
+	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
 		>(359) 0888187905</a
 	>
 </footer>
@@ -142,7 +150,7 @@
 		justify-content: space-between;
 		align-items: center;
 		background-color: #333;
-		color: #fff;
+		color: #fff !important;
 		padding: 10px;
 	}
 
@@ -212,5 +220,28 @@
 	.logo-image {
 		height: 100px;
 		width: auto;
+	}
+
+	/* Add CSS for the loader */
+	.loader {
+		border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #3498db;
+		width: 120px;
+		height: 120px;
+		animation: spin 2s linear infinite;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
 	}
 </style>
