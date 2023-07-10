@@ -49,7 +49,7 @@
 
 <main>
 	<section
-		class="hero text-center py-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white"
+		class="hero text-center py-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-gray-800"
 	>
 		<h1 class="text-4xl mb-4">Hello, I'm Peter Matov</h1>
 		<div class="typing-container text-xl mb-8 mx-auto">
@@ -60,24 +60,65 @@
 		>
 	</section>
 
-	<section class="skills text-center py-20 bg-gray-800 text-white">
+	<section class="skills text-center py-20 bg-gray-200 text-gray-800 p-6">
 		<h2 class="text-3xl mb-4">My Skills</h2>
 		<ul class="list-none p-0">
-			<li class="mb-2">Software Engineering</li>
-			<li class="mb-2">Data Science</li>
-			<li class="mb-2">Deep Learning</li>
-			<li class="mb-2">Machine Learning</li>
+			<li class="mb-2">
+				Software Engineering
+				<div class="progress">
+					<div
+						class="progress-bar"
+						role="progressbar"
+						style="width: 80%;"
+						aria-valuenow={80}
+						aria-valuemin={0}
+						aria-valuemax={100}
+					>
+						80%
+					</div>
+				</div>
+			</li>
+			<li class="mb-2">
+				Data Science
+				<div class="progress">
+					<div
+						class="progress-bar"
+						role="progressbar"
+						style="width: 70%;"
+						aria-valuenow={70}
+						aria-valuemin={0}
+						aria-valuemax={100}
+					>
+						70%
+					</div>
+				</div>
+			</li>
+			<li class="mb-2">
+				Machine Learning
+				<div class="progress">
+					<div
+						class="progress-bar"
+						role="progressbar"
+						style="width: 90%;"
+						aria-valuenow={90}
+						aria-valuemin={0}
+						aria-valuemax={100}
+					>
+						90%
+					</div>
+				</div>
+			</li>
 			<li class="mb-2">Python</li>
 			<!-- Add more skills here -->
 		</ul>
 	</section>
 
-	<section class="projects text-center py-20 bg-gray-900 text-white">
+	<section class="projects text-center py-20 bg-gray-900 text-gray-800">
 		<h2 class="text-3xl mb-4">Recent Projects</h2>
 		<!-- We'll add code to display your projects here later -->
 	</section>
 
-	<section class="cta text-center py-20 bg-gray-800 text-white">
+	<section class="cta text-center py-20 bg-gray-800 text-gray-800">
 		<h2 class="text-3xl mb-4">Interested in working together?</h2>
 		<a href="/contact" class="cta bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200 mr-4"
 			>Contact Me</a
@@ -116,7 +157,7 @@
 		margin-top: 10px;
 		padding: 10px 20px;
 		background-color: #333;
-		color: #fff;
+		color: #333;
 		text-decoration: none;
 		border-radius: 5px;
 		margin-right: 10px;
