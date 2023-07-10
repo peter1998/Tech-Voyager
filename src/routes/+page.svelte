@@ -10,7 +10,7 @@
 		'about my projects, skills and interests.'
 	];
 	let txtIndex = 0;
-	let speed = 60; /* The speed/duration of the effect in milliseconds */
+	let speed = 90; /* The speed/duration of the effect in milliseconds */
 
 	function typeWriter() {
 		const demoElement = document.getElementById('demo');
@@ -65,6 +65,9 @@
 		<ul class="list-none p-0">
 			<li class="mb-2">Software Engineering</li>
 			<li class="mb-2">Data Science</li>
+			<li class="mb-2">Deep Learning</li>
+			<li class="mb-2">Machine Learning</li>
+			<li class="mb-2">Python</li>
 			<!-- Add more skills here -->
 		</ul>
 	</section>
@@ -92,10 +95,6 @@
 </footer>
 
 <style>
-	body {
-		background-color: #1a202c;
-	}
-
 	header,
 	footer {
 		display: flex;
@@ -138,6 +137,30 @@
 		to {
 			width: 100%;
 		}
+	}
+
+	@keyframes gradientAnimation {
+		0% {
+			background: linear-gradient(45deg, #00c3ff, #ffff1c, #ff0080);
+			background-size: 400% 400%;
+			background-position: 0% 50%;
+		}
+
+		50% {
+			background: linear-gradient(45deg, #ff0080, #00c3ff, #ffff1c);
+			background-size: 400% 400%;
+			background-position: 100% 50%;
+		}
+
+		100% {
+			background: linear-gradient(45deg, #ffff1c, #ff0080, #00c3ff);
+			background-size: 400% 400%;
+			background-position: 0% 50%;
+		}
+	}
+
+	.hero {
+		animation: gradientAnimation 30s linear infinite;
 	}
 
 	.cta:hover {
