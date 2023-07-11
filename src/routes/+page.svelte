@@ -1,5 +1,8 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import * as THREE from 'three';
+	import NeuralNetworkAnimation from './../NeuralNetworkAnimation.svelte';
 
 	let i = 0;
 	let txts = [
@@ -12,32 +15,58 @@
 	let txtIndex = 0;
 	let speed = 90; /* The speed/duration of the effect in milliseconds */
 	let loading = true;
-
-	function typeWriter() {
-		const demoElement = document.getElementById('demo');
-		if (demoElement) {
-			if (i < txts[txtIndex].length) {
-				demoElement.innerHTML += txts[txtIndex].charAt(i);
-				i++;
-				setTimeout(typeWriter, speed);
-			} else {
-				i = 0;
-				txtIndex = (txtIndex + 1) % txts.length;
-				demoElement.innerHTML = '';
-				setTimeout(typeWriter, 1000);
-			}
-		}
-	}
+	let showAnimation = true; // New variable to control the display of the animation
 
 	onMount(() => {
-		setTimeout(() => {
-			loading = false;
-			typeWriter();
-		}, 2000); // delay for 2 seconds to simulate loading
+		if (typeof window !== 'undefined') {
+			function typeWriter() {
+				const demoElement = document.getElementById('demo');
+				if (demoElement) {
+					if (i < txts[txtIndex].length) {
+						demoElement.innerHTML += txts[txtIndex].charAt(i);
+						i++;
+						setTimeout(typeWriter, speed);
+					} else {
+						i = 0;
+						txtIndex = (txtIndex + 1) % txts.length;
+						demoElement.innerHTML = '';
+						setTimeout(typeWriter, 1000);
+					}
+				}
+			}
+
+			setTimeout(() => {
+				loading = false;
+				typeWriter();
+				showAnimation = false; // Stop showing the animation after loading
+			}, 2000); // delay for 2 seconds to simulate loading
+		}
 	});
+
+	let projects = [
+		{
+			name: 'WorkShop-Deep-Learning-Lab_files_ChestX_Ray',
+			description: 'Deep Learning Lab files for Chest X-Ray.',
+			url: 'https://github.com/peter1998/WorkShop-Deep-Learning-Lab_files_ChestX_Ray',
+			liveUrl: 'https://chestxraylab.com'
+		}
+		// Add more projects here...
+	];
+
+	let squares = Array(100).fill(0);
 </script>
 
-<div class="loader" style="display: {loading ? 'block' : 'none'};" />
+<!-- {#if showAnimation}
+	<!-- Only show the animation if showAnimation is true -->
+<!-- <NeuralNetworkAnimation /> -->
+<!-- {/if} -->
+
+<div id="animation" />
+<div class="loader" style="display: {loading ? 'flex' : 'none'};">
+	{#each squares as _, i}
+		<div />
+	{/each}
+</div>
 
 <header class="flex justify-around bg-gray-800 p-6 text-white">
 	<a href="/" class="hover:text-gray-300">
@@ -55,7 +84,7 @@
 	>
 </header>
 
-<main>
+<main transition:fade={{ delay: 1000, duration: 500 }}>
 	<section
 		class="hero text-center py-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-gray-800"
 	>
@@ -123,7 +152,22 @@
 
 	<section class="projects text-center py-20 bg-gray-900 text-gray-800">
 		<h2 class="text-3xl mb-4">Recent Projects</h2>
-		<!-- We'll add code to display your projects here later -->
+		<ul class="list-none p-0">
+			{#each projects as project (project.name)}
+				<li class="mb-2">
+					<a href={project.url} class="text-lg font-semibold hover:text-gray-300 text-white">
+						{project.name}
+					</a>
+					<p>{project.description}</p>
+					<a
+						href={project.liveUrl}
+						class="cta bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200"
+					>
+						View Live
+					</a>
+				</li>
+			{/each}
+		</ul>
 	</section>
 
 	<section class="cta text-center py-20 bg-gray-800 text-gray-800">
@@ -224,16 +268,39 @@
 
 	/* Add CSS for the loader */
 	.loader {
-		border: 16px solid #f3f3f3;
-		border-radius: 50%;
-		border-top: 16px solid #3498db;
-		width: 120px;
-		height: 120px;
-		animation: spin 2s linear infinite;
 		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		background-color: #333;
+		z-index: 9999;
+	}
+
+	.loader div {
+		width: 20px;
+		height: 20px;
+		margin: 5px;
+		background-color: #3498db;
+		animation: fade 1.2s infinite;
+	}
+
+	.loader div:nth-child(odd) {
+		animation-delay: 0.6s;
+	}
+
+	@keyframes fade {
+		0%,
+		100% {
+			opacity: 0.5;
+		}
+		50% {
+			opacity: 1;
+		}
 	}
 
 	@keyframes spin {
