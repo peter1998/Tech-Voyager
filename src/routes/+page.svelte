@@ -281,11 +281,22 @@
 		animation: gradientAnimation 30s linear infinite;
 	}
 
-	.cta:hover {
-		transform: scale(1.05);
-		transition: transform 0.3s ease-in-out;
+	.cta {
+		margin-top: 10px;
+		padding: 10px 15px; /* Decrease the width by reducing the padding */
+		background-color: #b57edc; /* Lavender */
+		color: black;
+		text-decoration: none;
+		border-radius: 5px;
+		margin-right: 10px;
+		transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
 	}
 
+	.cta:hover {
+		background-color: #008080; /* Teal */
+		color: gold; /* Keep the text color white on hover */
+		transform: scale(1.05); /* Increase the size of the button on hover */
+	}
 	.logo-image {
 		height: 100px;
 		width: auto;
