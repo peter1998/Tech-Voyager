@@ -21,7 +21,7 @@
 	nav {
 		display: flex;
 		justify-content: space-around;
-		background-color: #333;
+		background-color: #9be2d5;
 		color: #fff;
 		padding: 10px;
 	}

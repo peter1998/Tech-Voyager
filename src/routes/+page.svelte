@@ -166,13 +166,19 @@
 					<p class="text-gray-300 font-semibold">{project.description}</p>
 					<p class="text-gray-300 font-semibold">Technologies used:</p>
 					<div class="tech-logos">
-						<img
-							src="../../public/images/jupyter-logo.png"
-							alt="Jupyter Notebook"
-							class="tech-logo"
-						/>
-						<img src="../../public/images/tf_logo.png" alt="TensorFlow" class="tech-logo" />
-						<img src="../../public/images/pandas.png" alt="Pandas" class="tech-logo" />
+						<div class="logo-container">
+							<img
+								src="../../public/images/jupyter-logo.png"
+								alt="Jupyter Notebook"
+								class="tech-logo"
+							/>
+						</div>
+						<div class="logo-container">
+							<img src="../../public/images/tf_logo.png" alt="TensorFlow" class="tech-logo" />
+						</div>
+						<div class="logo-container">
+							<img src="../../public/images/pandas.png" alt="Pandas" class="tech-logo" />
+						</div>
 					</div>
 					<a
 						href={project.liveUrl}
@@ -208,7 +214,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background-color: #333;
+		background-color: #9be2d5;
 		color: #fff !important;
 		padding: 10px;
 	}
@@ -231,11 +237,15 @@
 	}
 
 	.typing-container {
-		width: 30em;
+		width: 50em;
 		white-space: nowrap;
 		overflow: hidden;
 		border-right: 0.15em solid orange;
 		margin: 0 auto; /* Center the container */
+		color: #000; /* Make the text black */
+		font-size: 1.5em; /* Increase the size of the text */
+		font-weight: bold; /* Make the text bold */
+		text-shadow: 2px 2px 4px #000000; /* Apply a subtle shadow to the text */
 	}
 
 	@keyframes typing {
@@ -347,11 +357,19 @@
 		gap: 20px;
 	}
 
-	.tech-logo {
-		width: 80px;
-		height: 80px;
+	.logo-container {
+		width: 60px;
+		height: 60px;
 		border-radius: 50%;
-		object-fit: contain;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.tech-logo {
+		max-width: 100%;
+		max-height: 100%;
 	}
 
 	.text-xl,
