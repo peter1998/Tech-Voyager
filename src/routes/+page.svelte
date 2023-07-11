@@ -45,10 +45,10 @@
 
 	let projects = [
 		{
-			name: 'WorkShop-Deep-Learning-Lab_files_ChestX_Ray',
-			description: 'Deep Learning Lab files for Chest X-Ray.',
+			name: 'Deep Learning Lab files for Chest X-Ray.',
+			description: 'WorkShop-Deep-Learning-Lab_files_ChestX_Ray',
 			url: 'https://github.com/peter1998/WorkShop-Deep-Learning-Lab_files_ChestX_Ray',
-			liveUrl: 'https://chestxraylab.com'
+			liveUrl: 'https://github.com/peter1998/WorkShop-Deep-Learning-Lab_files_ChestX_Ray'
 		}
 		// Add more projects here...
 	];
@@ -100,68 +100,83 @@
 	<section class="skills text-center py-20 bg-gray-200 text-gray-800 p-6">
 		<h2 class="text-3xl mb-4">My Skills</h2>
 		<ul class="list-none p-0">
-			<li class="mb-2">
-				Software Engineering
+			<li class="mb-6">
+				<div class="skill-title">Software Engineering</div>
 				<div class="progress">
-					<div
-						class="progress-bar"
-						role="progressbar"
-						style="width: 80%;"
-						aria-valuenow={80}
-						aria-valuemin={0}
-						aria-valuemax={100}
-					>
-						80%
+					<div class="progress-bar" style="width: 80%;" aria-valuenow="80">
+						<span class="progress-value">80%</span>
 					</div>
 				</div>
 			</li>
-			<li class="mb-2">
-				Data Science
+			<li class="mb-6">
+				<div class="skill-title">Data Science</div>
 				<div class="progress">
-					<div
-						class="progress-bar"
-						role="progressbar"
-						style="width: 70%;"
-						aria-valuenow={70}
-						aria-valuemin={0}
-						aria-valuemax={100}
-					>
-						70%
+					<div class="progress-bar" style="width: 20%;" aria-valuenow="20">
+						<span class="progress-value">20%</span>
 					</div>
 				</div>
 			</li>
-			<li class="mb-2">
-				Machine Learning
+			<li class="mb-6">
+				<div class="skill-title">Machine Learning</div>
 				<div class="progress">
-					<div
-						class="progress-bar"
-						role="progressbar"
-						style="width: 90%;"
-						aria-valuenow={90}
-						aria-valuemin={0}
-						aria-valuemax={100}
-					>
-						90%
+					<div class="progress-bar" style="width: 20%;" aria-valuenow="20">
+						<span class="progress-value">20%</span>
 					</div>
 				</div>
 			</li>
-			<li class="mb-2">Python</li>
+			<li class="mb-6">
+				<div class="skill-title">Design Principles</div>
+				<div class="progress">
+					<div class="progress-bar" style="width: 40%;" aria-valuenow="40">
+						<span class="progress-value">40%</span>
+					</div>
+				</div>
+			</li>
+			<li class="mb-6">
+				<div class="skill-title">Databases</div>
+				<div class="progress">
+					<div class="progress-bar" style="width: 70%;" aria-valuenow="70">
+						<span class="progress-value">70%</span>
+					</div>
+				</div>
+			</li>
+			<li class="mb-6">
+				<div class="skill-title">Agile Development</div>
+				<div class="progress">
+					<div class="progress-bar" style="width: 60%;" aria-valuenow="60">
+						<span class="progress-value">60%</span>
+					</div>
+				</div>
+			</li>
 			<!-- Add more skills here -->
 		</ul>
 	</section>
 
-	<section class="projects text-center py-20 bg-gray-900 text-gray-800">
-		<h2 class="text-3xl mb-4">Recent Projects</h2>
-		<ul class="list-none p-0">
+	<section class="projects py-20 text-black">
+		<h2 class="text-3xl mb-4 text-center font-bold">Recent Project</h2>
+		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			{#each projects as project (project.name)}
-				<li class="mb-2">
-					<a href={project.url} class="text-lg font-semibold hover:text-gray-300 text-white">
+				<li
+					class="card p-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-200"
+					style="background: linear-gradient(135deg, #6D5BBA 0%, #8D58BF 100%);"
+				>
+					<a href={project.url} class="text-xl font-bold hover:text-gray-300 text-white">
 						{project.name}
 					</a>
-					<p>{project.description}</p>
+					<p class="text-gray-300 font-semibold">{project.description}</p>
+					<p class="text-gray-300 font-semibold">Technologies used:</p>
+					<div class="tech-logos">
+						<img
+							src="../../public/images/jupyter-logo.png"
+							alt="Jupyter Notebook"
+							class="tech-logo"
+						/>
+						<img src="../../public/images/tf_logo.png" alt="TensorFlow" class="tech-logo" />
+						<img src="../../public/images/pandas.png" alt="Pandas" class="tech-logo" />
+					</div>
 					<a
 						href={project.liveUrl}
-						class="cta bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200"
+						class="cta mt-4 inline-block bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200 transition-colors duration-200"
 					>
 						View Live
 					</a>
@@ -293,6 +308,57 @@
 		animation-delay: 0.6s;
 	}
 
+	.skill-title {
+		font-weight: bold;
+		margin-bottom: 8px;
+	}
+
+	.progress {
+		background-color: #f5f5f5;
+		border-radius: 4px;
+		height: 20px;
+		overflow: hidden;
+	}
+
+	.progress-bar {
+		background-color: #4c51bf;
+		color: #fff;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
+		transition: width 0.3s ease-in-out;
+		position: relative;
+	}
+
+	.progress-value {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		color: #fff;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.tech-logos {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.tech-logo {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		object-fit: contain;
+	}
+
+	.text-xl,
+	.font-semibold {
+		font-weight: bold;
+		color: #fff;
+	}
 	@keyframes fade {
 		0%,
 		100% {
