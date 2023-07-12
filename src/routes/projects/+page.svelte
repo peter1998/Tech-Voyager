@@ -1,4 +1,5 @@
 <script>
+	import Sidebar from '../sidebar/Sidebar.svelte';
 	let projects = [
 		{
 			name: 'CryptoLearnX',
@@ -26,6 +27,8 @@
 		}
 	];
 </script>
+
+<Sidebar />
 
 <nav>
 	<a href="/">Home</a>

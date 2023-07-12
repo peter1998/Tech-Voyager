@@ -1,7 +1,9 @@
 <script>
 	// You can add JavaScript code here
+	import Sidebar from '../sidebar/Sidebar.svelte';
 </script>
 
+<Sidebar />
 <nav>
 	<a href="/">Home</a>
 	<a href="/about">About</a>

@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import * as THREE from 'three';
 	import NeuralNetworkAnimation from './../NeuralNetworkAnimation.svelte';
+	import Sidebar from '../routes/sidebar/Sidebar.svelte';
 
 	let i = 0;
 	let txts = [

@@ -2,12 +2,14 @@
 	import { onMount } from 'svelte';
 	import AOS from 'aos';
 	import 'aos/dist/aos.css';
+	import Sidebar from '../sidebar/Sidebar.svelte';
 
 	onMount(() => {
 		AOS.init();
 	});
 </script>
 
+<Sidebar />
 <nav>
 	<a href="/">Home</a>
 	<a href="/projects">Projects</a>
