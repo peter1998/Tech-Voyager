@@ -100,30 +100,99 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="work-experience">
 		<h2>Work Experience</h2>
-		<p>
-			Full Stack Developer at SoftZen, Sofia City, Bulgaria (03/2022 - Present) Developer Intern at
-			OneBit Software, Sofia City, Bulgaria (09/2021 - 12/2021)
-		</p>
+		<div class="job-card">
+			<div class="job-header">
+				<h3>Full Stack Developer</h3>
+				<h4>SoftZen</h4>
+				<p class="date">03/2022 - Present, Sofia City, Bulgaria (Remote)</p>
+			</div>
+			<p class="job-description">
+				Soft Zen excels in creating custom mobile, web, and desktop apps using top platforms and
+				frameworks for superb performance and user experiences.
+			</p>
+			<ul class="job-details">
+				<li>
+					Successfully completed numerous personal and study projects, showcasing versatility in
+					various programming languages and frameworks.
+				</li>
+				<li>
+					Consistently acquired new skills and knowledge in cutting-edge technologies, showcasing
+					adaptability and eagerness to learn.
+				</li>
+				<li>
+					Collaborating effectively with cross-functional teams, leveraging strong communication and
+					teamwork abilities.
+				</li>
+				<li>
+					Contributing to open-source projects and sharing knowledge with the developer community
+					through GitHub repositories and social media platforms.
+				</li>
+				<li>
+					Continuously seeking opportunities to improve software performance, user experience, and
+					maintainability by staying up-to-date with industry trends.
+				</li>
+				<li>
+					Designing and developing scalable web applications using React, TypeScript, Apollo,
+					GraphQL, SQL, and PostgreSQL at SoftZen.
+				</li>
+			</ul>
+			<p class="contact-info">Contact: Vasil Pavlov, contact@softzen.co</p>
+		</div>
+		<div class="job-card">
+			<div class="job-header">
+				<h3>Full Stack Developer Intern</h3>
+				<h4>OneBit Software</h4>
+				<p class="date">09/2021 - 12/2021, Sofia City, Bulgaria</p>
+			</div>
+			<p class="job-description">
+				OneBit Software is a dynamic software development company, providing innovative solutions
+				and great culture of continuous learning and improvement.
+			</p>
+			<ul class="job-details">
+				<li>
+					Worked as a Developer on the Quantum DMS project, part of Team Mongo, utilizing .NET 5,
+					ASP.NET, MongoDB, and React with TypeScript.
+				</li>
+				<li>
+					Demonstrated commitment to agile software development practices, including sprint planning
+					and delivering through a pull-request process.
+				</li>
+				<li>
+					Developed a deep understanding of various programming languages and frameworks such as C#,
+					Java, SQL Server, React Native, Python, Angular, BDD, TDD, .NET, Spring Boot, MongoDB,
+					MVC, Blazor, and Azure DevOps.
+				</li>
+				<li>
+					Embraced an Agile mindset, focusing on building the right product and adapting to change.
+				</li>
+				<li>Recognized the importance of continuous learning in software development.</li>
+				<li>
+					Identified the crucial role of designing software that meets user needs. Realized that the
+					best code is minimal and easy to maintain.
+				</li>
+			</ul>
+			<p class="contact-info">Contact: Radi Atanassov, radi@sharepoint.bg, +359878823339</p>
+		</div>
 	</section>
 
 	<section>
 		<h2>Skills</h2>
 		<div class="skills-section px-3 px-lg-4">
-			<h2 class="h3 mb-3">Software Engineer</h2>
 			<div class="row">
 				<div class="col-md-6">
+					<h2 class="h3 mb-3">Software Engineer</h2>
 					<div class="mb-2">
 						<span>HTML</span>
 						<div class="progress my-1">
 							<div
-								class="progress-bar bg-primary"
+								class="progress-bar-engineer bg-primary"
 								role="progressbar"
 								style="width: 90%"
-								aria-valuenow={90}
-								aria-valuemin={0}
-								aria-valuemax={100}
+								aria-valuenow="90"
+								aria-valuemin="0"
+								aria-valuemax="100"
 							/>
 						</div>
 					</div>
@@ -131,7 +200,7 @@
 						<span>CSS</span>
 						<div class="progress my-1">
 							<div
-								class="progress-bar bg-primary"
+								class="progress-bar-engineer bg-primary"
 								role="progressbar"
 								style="width: 85%"
 								aria-valuenow="85"
@@ -144,7 +213,7 @@
 						<span>JavaScript</span>
 						<div class="progress my-1">
 							<div
-								class="progress-bar bg-primary"
+								class="progress-bar-engineer bg-primary"
 								role="progressbar"
 								style="width: 75%"
 								aria-valuenow="75"
@@ -153,13 +222,79 @@
 							/>
 						</div>
 					</div>
+					<div class="mb-2">
+						<span>React</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-engineer bg-primary"
+								role="progressbar"
+								style="width: 80%"
+								aria-valuenow="80"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>Node.js</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-engineer bg-primary"
+								role="progressbar"
+								style="width: 70%"
+								aria-valuenow="70"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>Python</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-engineer bg-primary"
+								role="progressbar"
+								style="width: 65%"
+								aria-valuenow="65"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>Java</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-engineer bg-primary"
+								role="progressbar"
+								style="width: 60%"
+								aria-valuenow="60"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>C#</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-engineer bg-primary"
+								role="progressbar"
+								style="width: 55%"
+								aria-valuenow="55"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6">
+					<h2 class="h3 mb-3">Data Science</h2>
 					<div class="mb-2">
 						<span>Adobe Photoshop</span>
 						<div class="progress my-1">
 							<div
-								class="progress-bar bg-success"
+								class="progress-bar-data-science bg-success"
 								role="progressbar"
 								style="width: 80%"
 								aria-valuenow="80"
@@ -172,7 +307,7 @@
 						<span>Sketch</span>
 						<div class="progress my-1">
 							<div
-								class="progress-bar bg-success"
+								class="progress-bar-data-science bg-success"
 								role="progressbar"
 								style="width: 85%"
 								aria-valuenow="85"
@@ -185,7 +320,72 @@
 						<span>Adobe XD</span>
 						<div class="progress my-1">
 							<div
-								class="progress-bar bg-success"
+								class="progress-bar-data-science bg-success"
+								role="progressbar"
+								style="width: 75%"
+								aria-valuenow="75"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>Adobe XD</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-data-science bg-success"
+								role="progressbar"
+								style="width: 75%"
+								aria-valuenow="75"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>Adobe XD</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-data-science bg-success"
+								role="progressbar"
+								style="width: 75%"
+								aria-valuenow="75"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>Adobe XD</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-data-science bg-success"
+								role="progressbar"
+								style="width: 75%"
+								aria-valuenow="75"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>Adobe XD</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-data-science bg-success"
+								role="progressbar"
+								style="width: 75%"
+								aria-valuenow="75"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							/>
+						</div>
+					</div>
+					<div class="mb-2">
+						<span>Adobe XD</span>
+						<div class="progress my-1">
+							<div
+								class="progress-bar-data-science bg-success"
 								role="progressbar"
 								style="width: 75%"
 								aria-valuenow="75"
@@ -209,6 +409,49 @@
 </main>
 
 <style>
+	.progress-bar {
+		transition: transform 0.5s;
+	}
+
+	.progress-bar:hover {
+		transform: perspective(600px) rotateY(180deg);
+	}
+
+	@keyframes gradient-engineer {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	@keyframes gradient-data-science {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	.progress-bar-engineer {
+		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+		background-size: 400% 400%;
+		animation: gradient-engineer 15s ease infinite;
+	}
+
+	.progress-bar-data-science {
+		background: linear-gradient(-45deg, #23d5ab, #23a6d5, #e73c7e, #ee7752);
+		background-size: 400% 400%;
+		animation: gradient-data-science 15s ease infinite;
+	}
 	nav {
 		display: flex;
 		justify-content: space-around;
@@ -376,6 +619,60 @@
 		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
 		transform: translateX(-100%);
 		animation: speak 2s linear infinite;
+	}
+
+	.work-experience {
+		background: #f9f9f9;
+		padding: 20px;
+	}
+
+	.job-card {
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+		margin-bottom: 20px;
+		padding: 20px;
+	}
+
+	.job-header {
+		border-bottom: 1px solid #eee;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+	}
+
+	.job-header h3 {
+		color: #333;
+		font-size: 1.5em;
+		margin-bottom: 5px;
+	}
+
+	.job-header h4 {
+		color: #777;
+		font-size: 1.2em;
+		margin-bottom: 5px;
+	}
+
+	.date {
+		color: #999;
+		font-size: 0.9em;
+	}
+
+	.job-description {
+		color: #666;
+		font-size: 1em;
+		margin-bottom: 20px;
+	}
+
+	.job-details {
+		color: #666;
+		font-size: 1em;
+		margin-bottom: 20px;
+	}
+
+	.contact-info {
+		color: #333;
+		font-size: 0.9em;
+		font-weight: 600;
 	}
 
 	@keyframes speak {
