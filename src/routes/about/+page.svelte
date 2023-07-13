@@ -751,4 +751,26 @@
 			grid-template-columns: 1fr;
 		}
 	}
+
+	.progress {
+		position: relative;
+		overflow: visible; /* Allows the percentage to be visible outside the progress bar */
+	}
+
+	/* Display the percentage value on hover */
+	.progress .progress-bar-engineer:hover::after,
+	.progress .progress-bar-data-science:hover::after {
+		content: attr(aria-valuenow) '%';
+		position: absolute;
+		right: -30px; /* Adjust this value to move the percentage value outside the progress bar */
+		top: -10px; /* Adjust this value to move the percentage value above the progress bar */
+		transform: translateY(-50%);
+		color: #000; /* Change this to any color you want */
+		font-size: 14px; /* Adjust this to change the font size */
+		font-weight: bold; /* Makes the text bold */
+		background-color: #fff; /* Adds a white background to the text */
+		padding: 2px 5px; /* Adds some padding around the text */
+		border-radius: 5px; /* Makes the background rounded */
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for more 3D effect */
+	}
 </style>
