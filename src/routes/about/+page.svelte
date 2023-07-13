@@ -365,46 +365,46 @@
 	<section>
 		<h2>Interests</h2>
 		<p>
-			Following: Lex Fridman, Richard Branson, Gary Vaynerchuk, Laszlo Bock, Andrew Huberman, Simon
+			Following: Lex Fridman, Tony Robbins, Gary Vaynerchuk, Laszlo Bock, Andrew Huberman, Simon
 			Sinek
 		</p>
 
 		<div class="interests-container">
 			<div class="person">
-				<img src="lex-fridman.jpg" alt="Lex Fridman" />
+				<img src="../../../public/images/lex-2.jpg" alt="Lex Fridman" />
 				<blockquote>
 					"Programming is the art of algorithm design and the craft of debugging errant code."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="richard-branson.jpg" alt="Richard Branson" />
+				<img src="../../../public/images/tony-robinson.jpg" alt="Tony Robinson" />
 				<blockquote>
 					"In programming, as in life, it's all about turning obstacles into opportunities."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="gary-vaynerchuk.jpg" alt="Gary Vaynerchuk" />
+				<img src="../../../public/images/gary.jpg" alt="Gary Vaynerchuk" />
 				<blockquote>
 					"Success in programming comes from combining creativity, hustle, and a deep understanding
 					of user needs."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="../../../public/images/tony-robinson.jpg" alt="Laszlo Bock" />
+				<img src="../../../public/images/lazlo.jpg" alt="Laszlo Bock" />
 				<blockquote>
 					"Programming is not just about code; it's about solving problems and making a positive
 					impact on the world."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="andrew-huberman.jpg" alt="Andrew Huberman" />
+				<img src="../../../public/images/andrew.PNG" alt="Andrew Huberman" />
 				<blockquote>
 					"The power of programming lies in its ability to transform ideas into reality and unlock
 					infinite possibilities."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="simon-sinek.jpg" alt="Simon Sinek" />
+				<img src="../../../public/images/simon-sinek.jpg" alt="Simon Sinek" />
 				<blockquote>
 					"Programming is not just about writing code; it's about creating systems that inspire and
 					empower people."
@@ -717,6 +717,33 @@
 		font-size: 1.2rem;
 		font-style: italic;
 		margin-bottom: 0;
+	}
+
+	.person {
+		/* Other styles */
+		transition: background-color 2s ease;
+	}
+
+	.person img {
+		/* Other styles */
+		transition: filter 2s ease;
+	}
+
+	.person blockquote {
+		/* Other styles */
+		transition: color 2s ease;
+	}
+
+	.person:hover {
+		background-color: black;
+	}
+
+	.person:hover img {
+		filter: brightness(0.5);
+	}
+
+	.person:hover blockquote {
+		color: white;
 	}
 
 	@media (max-width: 767px) {
