@@ -74,7 +74,6 @@
 		<img src="/public/images/logo.PNG" alt="Logo" class="logo-image" />
 	</a>
 	<nav>
-		<a href="/" class="hover:text-gray-300">Home</a>
 		<a href="/about" class="hover:text-gray-300">About</a>
 		<a href="/projects" class="hover:text-gray-300">Projects</a>
 		<a href="/cv" class="hover:text-gray-300">CV</a>
@@ -169,16 +168,16 @@
 					<div class="tech-logos">
 						<div class="logo-container">
 							<img
-								src="../../public/images/jupyter-logo.png"
+								src="../../public/images/logos/jupyter-logo.png"
 								alt="Jupyter Notebook"
 								class="tech-logo"
 							/>
 						</div>
 						<div class="logo-container">
-							<img src="../../public/images/tf_logo.png" alt="TensorFlow" class="tech-logo" />
+							<img src="../../public/images/logos/tf_logo.png" alt="TensorFlow" class="tech-logo" />
 						</div>
 						<div class="logo-container">
-							<img src="../../public/images/pandas.png" alt="Pandas" class="tech-logo" />
+							<img src="../../public/images/logos/pandas.png" alt="Pandas" class="tech-logo" />
 						</div>
 					</div>
 					<a
