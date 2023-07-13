@@ -1,32 +1,65 @@
 <script>
 	import Sidebar from '../sidebar/Sidebar.svelte';
+	import { onMount } from 'svelte';
+
+	let images = [
+		'/public/images/Me/me-bike.jpg',
+		'/public/images/Me/me-iztok.jpg',
+		'/public/images/yoda.jpg'
+	];
+	let currentImageIndex = 0;
+
+	onMount(() => {
+		const interval = setInterval(() => {
+			currentImageIndex = (currentImageIndex + 1) % images.length;
+		}, 3000); // Change image every 3 seconds
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
 </script>
 
-<Sidebar />
+<div class="background">
+	<Sidebar />
 
-<nav>
-	<a href="/">Home</a>
-	<a href="/about">About</a>
-	<a href="/projects">Projects</a>
-	<a href="/cv">CV</a>
-</nav>
+	<nav>
+		<a href="/">Home</a>
+		<a href="/about">About</a>
+		<a href="/projects">Projects</a>
+		<a href="/cv">CV</a>
+	</nav>
 
-<main>
-	<div class="cv-container">
-		<a href="/path-to-your-cv.pdf" download class="download-link">Download my CV</a>
-	</div>
-</main>
+	<main>
+		<div class="cv-container" style="background-image: url({images[currentImageIndex]})">
+			<div class="download-container">
+				<a href="../../../public/cv-holder/Petar's IT Resume.pdf" download class="download-link"
+					>Download my CV</a
+				>
+			</div>
+			<div class="dots">
+				{#each images as image, index}
+					<span class="dot" class:selected={index === currentImageIndex} />
+				{/each}
+			</div>
+		</div>
+	</main>
+</div>
+
+<footer class="text-center py-6 bg-gray-800 text-white">
+	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
+		>(359) 0888187905</a
+	>
+</footer>
 
 <style>
-	body {
-		margin: 0;
-		height: 100vh;
+	footer {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		justify-content: center;
-		background: #000;
-		overflow: hidden;
-		font-family: Arial, sans-serif;
+		background-color: #9be2d5;
+		color: #fff !important;
+		padding: 10px;
 	}
 
 	@keyframes move {
@@ -38,16 +71,19 @@
 		}
 	}
 
-	body:before {
+	.background:before {
 		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+		background-image: url('/public/images/cv/cv-background.jpeg');
 		animation: move 2s linear infinite;
 		z-index: -1;
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	nav {
@@ -80,7 +116,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: calc(100vh - 20px); /* Subtract the padding */
+		height: calc(100vh - 70px); /* Subtract the padding */
 	}
 
 	.cv-container {
@@ -97,10 +133,19 @@
 		transform: scale(1);
 		transition: transform 0.3s ease;
 		perspective: 1000px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
 	}
 
 	.cv-container:hover {
 		transform: scale(1.05) rotateX(10deg);
+	}
+
+	.download-container {
+		margin-top: 50%; /* 2/5 from the top */
+		margin-left: 30%; /* 1/5 to the right from the center */
 	}
 
 	.download-link {
@@ -123,6 +168,37 @@
 		}
 		100% {
 			transform: scale(1);
+		}
+	}
+
+	.dots {
+		position: absolute;
+		bottom: 10px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.dot {
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.dot.selected {
+		background-color: #717171;
+	}
+	@keyframes move {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 100px 50px;
 		}
 	}
 </style>

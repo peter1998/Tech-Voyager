@@ -125,6 +125,12 @@
 	</ul>
 </main>
 
+<footer class="text-center py-6 bg-gray-800 text-white">
+	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
+		>(359) 0888187905</a
+	>
+</footer>
+
 <style>
 	nav {
 		display: flex;
@@ -133,7 +139,14 @@
 		color: #fff;
 		padding: 10px;
 	}
-
+	footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #9be2d5;
+		color: #fff !important;
+		padding: 10px;
+	}
 	nav a {
 		color: #fff;
 		text-decoration: none;
