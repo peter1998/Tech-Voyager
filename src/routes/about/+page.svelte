@@ -186,33 +186,33 @@
 				<div class="col-md-6">
 					<h2 class="h3 mb-3">Software Engineer</h2>
 					<div class="mb-2">
-						<span>HTML</span>
+						<span>TypeScript</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-engineer bg-primary"
 								role="progressbar"
-								style="width: 90%"
-								aria-valuenow="90"
+								style="width: 50%"
+								aria-valuenow="50"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
 						</div>
 					</div>
 					<div class="mb-2">
-						<span>CSS</span>
+						<span>Tailwind CSS</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-engineer bg-primary"
 								role="progressbar"
-								style="width: 85%"
-								aria-valuenow="85"
+								style="width: 15%"
+								aria-valuenow="15"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
 						</div>
 					</div>
 					<div class="mb-2">
-						<span>JavaScript</span>
+						<span>Node.js</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-engineer bg-primary"
@@ -230,15 +230,15 @@
 							<div
 								class="progress-bar-engineer bg-primary"
 								role="progressbar"
-								style="width: 80%"
-								aria-valuenow="80"
+								style="width: 50%"
+								aria-valuenow="50"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
 						</div>
 					</div>
 					<div class="mb-2">
-						<span>Node.js</span>
+						<span>Svelte</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-engineer bg-primary"
@@ -256,21 +256,21 @@
 							<div
 								class="progress-bar-engineer bg-primary"
 								role="progressbar"
-								style="width: 65%"
-								aria-valuenow="65"
+								style="width: 25%"
+								aria-valuenow="25"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
 						</div>
 					</div>
 					<div class="mb-2">
-						<span>Java</span>
+						<span>Angular</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-engineer bg-primary"
 								role="progressbar"
-								style="width: 60%"
-								aria-valuenow="60"
+								style="width: 40%"
+								aria-valuenow="40"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
@@ -293,7 +293,7 @@
 				<div class="col-md-6">
 					<h2 class="h3 mb-3">Data Science</h2>
 					<div class="mb-2">
-						<span>Adobe Photoshop</span>
+						<span>SQL</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-data-science bg-success"
@@ -306,91 +306,52 @@
 						</div>
 					</div>
 					<div class="mb-2">
-						<span>Sketch</span>
+						<span>Pandas</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-data-science bg-success"
 								role="progressbar"
-								style="width: 85%"
-								aria-valuenow="85"
+								style="width: 10%"
+								aria-valuenow="10"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
 						</div>
 					</div>
 					<div class="mb-2">
-						<span>Adobe XD</span>
+						<span>NumPy</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-data-science bg-success"
 								role="progressbar"
-								style="width: 75%"
-								aria-valuenow="75"
+								style="width: 10%"
+								aria-valuenow="10"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
 						</div>
 					</div>
 					<div class="mb-2">
-						<span>Adobe XD</span>
+						<span>scikit-learn</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-data-science bg-success"
 								role="progressbar"
-								style="width: 75%"
-								aria-valuenow="75"
+								style="width: 10%"
+								aria-valuenow="10"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
 						</div>
 					</div>
 					<div class="mb-2">
-						<span>Adobe XD</span>
+						<span>TensorFlow</span>
 						<div class="progress my-1">
 							<div
 								class="progress-bar-data-science bg-success"
 								role="progressbar"
-								style="width: 75%"
-								aria-valuenow="75"
-								aria-valuemin="0"
-								aria-valuemax="100"
-							/>
-						</div>
-					</div>
-					<div class="mb-2">
-						<span>Adobe XD</span>
-						<div class="progress my-1">
-							<div
-								class="progress-bar-data-science bg-success"
-								role="progressbar"
-								style="width: 75%"
-								aria-valuenow="75"
-								aria-valuemin="0"
-								aria-valuemax="100"
-							/>
-						</div>
-					</div>
-					<div class="mb-2">
-						<span>Adobe XD</span>
-						<div class="progress my-1">
-							<div
-								class="progress-bar-data-science bg-success"
-								role="progressbar"
-								style="width: 75%"
-								aria-valuenow="75"
-								aria-valuemin="0"
-								aria-valuemax="100"
-							/>
-						</div>
-					</div>
-					<div class="mb-2">
-						<span>Adobe XD</span>
-						<div class="progress my-1">
-							<div
-								class="progress-bar-data-science bg-success"
-								role="progressbar"
-								style="width: 75%"
-								aria-valuenow="75"
+								style="width: 25%"
+								aria-valuenow="25"
 								aria-valuemin="0"
 								aria-valuemax="100"
 							/>
@@ -407,6 +368,49 @@
 			Following: Lex Fridman, Richard Branson, Gary Vaynerchuk, Laszlo Bock, Andrew Huberman, Simon
 			Sinek
 		</p>
+
+		<div class="interests-container">
+			<div class="person">
+				<img src="lex-fridman.jpg" alt="Lex Fridman" />
+				<blockquote>
+					"Programming is the art of algorithm design and the craft of debugging errant code."
+				</blockquote>
+			</div>
+			<div class="person">
+				<img src="richard-branson.jpg" alt="Richard Branson" />
+				<blockquote>
+					"In programming, as in life, it's all about turning obstacles into opportunities."
+				</blockquote>
+			</div>
+			<div class="person">
+				<img src="gary-vaynerchuk.jpg" alt="Gary Vaynerchuk" />
+				<blockquote>
+					"Success in programming comes from combining creativity, hustle, and a deep understanding
+					of user needs."
+				</blockquote>
+			</div>
+			<div class="person">
+				<img src="../../../public/images/tony-robinson.jpg" alt="Laszlo Bock" />
+				<blockquote>
+					"Programming is not just about code; it's about solving problems and making a positive
+					impact on the world."
+				</blockquote>
+			</div>
+			<div class="person">
+				<img src="andrew-huberman.jpg" alt="Andrew Huberman" />
+				<blockquote>
+					"The power of programming lies in its ability to transform ideas into reality and unlock
+					infinite possibilities."
+				</blockquote>
+			</div>
+			<div class="person">
+				<img src="simon-sinek.jpg" alt="Simon Sinek" />
+				<blockquote>
+					"Programming is not just about writing code; it's about creating systems that inspire and
+					empower people."
+				</blockquote>
+			</div>
+		</div>
 	</section>
 </main>
 
@@ -683,6 +687,41 @@
 		}
 		100% {
 			transform: translateX(100%);
+		}
+	}
+
+	.interests-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
+		margin-top: 20px;
+	}
+
+	.person {
+		text-align: center;
+		background-color: #f5f5f5;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.person img {
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 50%;
+		margin-bottom: 10px;
+	}
+
+	.person blockquote {
+		font-size: 1.2rem;
+		font-style: italic;
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 767px) {
+		.interests-container {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
