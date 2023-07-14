@@ -27,7 +27,7 @@
 		<a href="/">Home</a>
 		<a href="/about">About</a>
 		<a href="/projects">Projects</a>
-		<a href="/cv">CV</a>
+		<a href="/contact">Contacts</a>
 	</nav>
 
 	<main>
