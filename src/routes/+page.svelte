@@ -93,7 +93,7 @@
 		<div class="typing-container text-xl mb-8 mx-auto">
 			<p id="demo" />
 		</div>
-		<a href="/projects" class="cta bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200"
+		<a href="/projects" class="cta bg-white text-black py-2 px-4 rounded hover:bg-gray-200"
 			>View My Projects</a
 		>
 	</section>
@@ -157,10 +157,7 @@
 		<h2 class="text-3xl mb-4 text-center font-bold">Recent Project</h2>
 		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			{#each projects as project (project.name)}
-				<li
-					class="card p-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-200"
-					style="background: linear-gradient(135deg, #6D5BBA 0%, #8D58BF 100%);"
-				>
+				<li class="card p-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-200">
 					<a href={project.url} class="text-xl font-bold hover:text-gray-300 text-white">
 						{project.name}
 					</a>
@@ -298,7 +295,7 @@
 	.skills,
 	.cta {
 		background-color: #2d3748;
-		color: white;
+		color: black;
 		padding: 10px;
 	}
 
@@ -466,5 +463,16 @@
 	.skills:hover a,
 	.projects .card:hover a {
 		color: gold;
+	}
+
+	.card {
+		background-color: #2d3748;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.card:hover {
+		background-color: #008080;
+		color: gold;
+		transform: scale(1.05);
 	}
 </style>
