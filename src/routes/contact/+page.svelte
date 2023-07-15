@@ -67,19 +67,16 @@
 
 		<h3>Drop Me a Line</h3>
 		<p>Have a question or want to work together? Just fill out the form below!</p>
-		<form action="https://formspree.io/f/xeqbqbdg" method="POST">
-			<label>
-				Your Name:
-				<input type="text" name="name" id="name" placeholder="Your Name..." />
-			</label>
-			<label>
-				Your Email:
-				<input type="email" name="email" id="email" placeholder="Your Email..." />
-			</label>
-			<label>
-				Your Message:
-				<textarea name="message" id="message" cols="45" rows="5" placeholder="Your Message..." />
-			</label>
+		<form action="https://formspree.io/f/xeqbqbdg" method="POST" id="contact-form">
+			<label for="name">Your Name:</label>
+			<input type="text" name="name" id="name" placeholder="Your Name..." />
+
+			<label for="email">Your Email:</label>
+			<input type="email" name="email" id="email" placeholder="Your Email..." />
+
+			<label for="message">Your Message:</label>
+			<textarea name="message" id="message" cols="45" rows="5" placeholder="Your Message..." />
+
 			<button type="submit" name="button" id="button">Say hello!</button>
 		</form>
 	</section>
