@@ -1,4 +1,6 @@
 <script>
+	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
 	import Sidebar from '../sidebar/Sidebar.svelte';
 
 	let sections = [
@@ -86,16 +88,11 @@
 	];
 </script>
 
+<Header />
+
 <Sidebar />
 
 <div class="container">
-	<nav>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/cv">CV</a>
-		<a href="/contact">Contact</a>
-	</nav>
-
 	{#each sections as section}
 		<div class="section">
 			<h2 class="section-title">{section.title}</h2>
@@ -104,11 +101,7 @@
 	{/each}
 </div>
 
-<footer class="text-center py-6 bg-gray-800 text-white">
-	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
-		>(359) 0888187905</a
-	>
-</footer>
+<Footer />
 
 <style>
 	/* Add your custom styles here */
@@ -129,8 +122,14 @@
 	}
 
 	nav a {
+		display: inline-block;
+		margin-top: 10px;
+		padding: 10px 20px;
+		background-color: #333;
 		color: #fff;
 		text-decoration: none;
+		border-radius: 5px;
+		margin-right: 10px;
 	}
 
 	.section {

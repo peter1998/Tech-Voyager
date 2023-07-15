@@ -24,6 +24,16 @@
 	import ChestXRayLab from '../../../public/images/projects/ChestXRayLab.png';
 	import CryptoCurrencyMarket from '../../../public/images/projects/Merged_CryptoCurrencyMarket.png';
 	import VendingMaschine from '../../../public/images/projects/vendingMaschine.png';
+	import {
+		faYoutube,
+		faFacebook,
+		faLinkedin,
+		faGithub,
+		faInstagram
+	} from '@fortawesome/free-brands-svg-icons';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
 
 	let projects = [
 		{
@@ -91,12 +101,7 @@
 
 <Sidebar />
 
-<nav>
-	<a href="/">Home</a>
-	<a href="/about">About</a>
-	<a href="/cv">CV</a>
-	<a href="/contact">Contact</a>
-</nav>
+<Header />
 
 <main>
 	<h1>My Projects</h1>
@@ -125,27 +130,43 @@
 	</ul>
 </main>
 
-<footer class="text-center py-6 bg-gray-800 text-white">
-	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
-		>(359) 0888187905</a
-	>
-</footer>
+<Footer />
 
 <style>
-	nav {
+	.social-links {
 		display: flex;
 		justify-content: space-around;
-		background-color: #9be2d5;
-		color: #fff;
-		padding: 10px;
+		width: 60%; /* Adjust this value to increase or decrease spacing between icons */
 	}
-	footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: #9be2d5;
-		color: #fff !important;
-		padding: 10px;
+
+	.social-links a {
+		color: #fff;
+		font-size: 2em; /* Adjust this value to make the icons larger */
+		transition: color 0.3s ease;
+	}
+
+	.social-links a:hover {
+		color: #f1f1f1;
+	}
+
+	.social-links .icon.youtube {
+		color: #ff0000;
+	}
+
+	.social-links .icon.facebook {
+		color: #3b5998;
+	}
+
+	.social-links .icon.linkedin {
+		color: #0e76a8;
+	}
+
+	.social-links .icon.github {
+		color: #fff;
+	}
+
+	.social-links .icon.instagram {
+		color: #e1306c;
 	}
 	nav a {
 		color: #fff;

@@ -3,6 +3,8 @@
 	import AOS from 'aos';
 	import 'aos/dist/aos.css';
 	import Sidebar from '../sidebar/Sidebar.svelte';
+	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
 
 	onMount(() => {
 		AOS.init();
@@ -10,12 +12,7 @@
 </script>
 
 <Sidebar />
-<nav>
-	<a href="/">Home</a>
-	<a href="/projects">Projects</a>
-	<a href="/cv">CV</a>
-	<a href="/contact">Contact</a>
-</nav>
+<Header />
 
 <main>
 	<section>
@@ -413,6 +410,8 @@
 		</div>
 	</section>
 </main>
+
+<Footer />
 
 <style>
 	.progress-bar {

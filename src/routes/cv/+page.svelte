@@ -1,4 +1,6 @@
 <script>
+	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
 	import Sidebar from '../sidebar/Sidebar.svelte';
 	import { onMount } from 'svelte';
 
@@ -23,12 +25,7 @@
 <div class="background">
 	<Sidebar />
 
-	<nav>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/projects">Projects</a>
-		<a href="/contact">Contacts</a>
-	</nav>
+	<Header />
 
 	<main>
 		<div class="cv-container" style="background-image: url({images[currentImageIndex]})">
@@ -46,22 +43,9 @@
 	</main>
 </div>
 
-<footer class="text-center py-6 bg-gray-800 text-white">
-	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
-		>(359) 0888187905</a
-	>
-</footer>
+<Footer />
 
 <style>
-	footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: #9be2d5;
-		color: #fff !important;
-		padding: 10px;
-	}
-
 	@keyframes move {
 		0% {
 			background-position: 0 0;

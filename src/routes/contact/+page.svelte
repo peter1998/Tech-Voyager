@@ -1,4 +1,6 @@
 <script>
+	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
 	import Sidebar from '../sidebar/Sidebar.svelte';
 	import { faYoutube, faFacebook, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 	import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -7,14 +9,8 @@
 
 <Sidebar />
 
+<Header />
 <main>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/projects">Projects</a>
-		<a href="/cv">CV</a>
-	</nav>
-
 	<section id="contact">
 		<h2>Contact</h2>
 		<p>Let's Keep In Touch</p>
@@ -81,6 +77,8 @@
 		</form>
 	</section>
 </main>
+
+<Footer />
 
 <style>
 	nav {

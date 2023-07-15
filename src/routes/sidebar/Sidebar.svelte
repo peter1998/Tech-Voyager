@@ -49,9 +49,13 @@
 		background-color: #f5f5f5;
 		padding: 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		transition: width 0.3s ease;
+		transition: width 0.3s ease, background-color 0.3s ease;
 		z-index: 999;
 		overflow: hidden;
+	}
+
+	.sidebar-container:hover {
+		background-color: #000;
 	}
 
 	.sidebar {
@@ -72,6 +76,10 @@
 		transition: color 0.3s ease;
 	}
 
+	a:hover {
+		color: #fff;
+	}
+
 	.sidebar-header {
 		display: flex;
 		justify-content: flex-end;
@@ -84,11 +92,11 @@
 		cursor: pointer;
 		font-size: 20px;
 		color: #333;
-		transition: transform 0.3s ease;
+		transition: transform 0.3s ease, color 0.3s ease;
 	}
 
 	.toggle-button:hover {
-		color: #666;
+		color: #fff;
 	}
 
 	.toggle-button:focus {
