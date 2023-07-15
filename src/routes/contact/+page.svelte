@@ -1,6 +1,7 @@
 <script>
 	import Sidebar from '../sidebar/Sidebar.svelte';
 	import { faYoutube, faFacebook, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+	import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 </script>
 
@@ -17,27 +18,30 @@
 	<section id="contact">
 		<h2>Contact</h2>
 		<p>Let's Keep In Touch</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+		<p>
+			I'm always open to discussing product design, technology, and creative ideas. If you have a
+			project in mind, let's connect!
+		</p>
 
 		<div class="contact-details">
-			<div>
-				<h3>Address</h3>
+			<div class="contact-item">
+				<h3><FontAwesomeIcon icon={faMapMarkerAlt} /> Address</h3>
 				<p>
-					Andrew Smith<br />PO Box 16122 Collins Street West,<br />Victoria 8007, United States.
+					Peter Matov<br />PO Box 16122 Collins Street West,<br />Victoria 8007, United States.
 				</p>
 			</div>
-			<div>
-				<h3>Phone</h3>
-				<p>+123-456-7890</p>
+			<div class="contact-item">
+				<h3><FontAwesomeIcon icon={faPhone} /> Phone</h3>
+				<p>+359-0888187905</p>
 			</div>
-			<div>
-				<h3>Email</h3>
-				<p><a href="mailto:no-reply@domain.com">no-reply@domain.com</a></p>
+			<div class="contact-item">
+				<h3><FontAwesomeIcon icon={faEnvelope} /> Email</h3>
+				<p><a href="mailto:no-reply@domain.com">pmatov@gmail.com</a></p>
 			</div>
 		</div>
 
 		<h3>I'm also on Social Networks</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+		<p>Follow me on social media to stay updated on my latest projects and insights!</p>
 		<div class="social-links">
 			<a
 				class="icon youtube"
@@ -62,6 +66,7 @@
 		</div>
 
 		<h3>Drop Me a Line</h3>
+		<p>Have a question or want to work together? Just fill out the form below!</p>
 		<form id="contact-form">
 			<input name="name" type="text" id="name" placeholder="Your Name..." />
 			<input name="email" type="text" id="email" placeholder="Your Email..." />
@@ -109,11 +114,16 @@
 		padding: 20px;
 	}
 
-	.contact-details,
-	.social-links {
+	.contact-details {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 20px;
+	}
+
+	.contact-item {
+		background-color: #f1f1f1;
+		padding: 10px;
+		border-radius: 5px;
 	}
 
 	#contact-form input,
