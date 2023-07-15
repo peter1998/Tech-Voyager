@@ -4,6 +4,7 @@
 	import * as THREE from 'three';
 	import NeuralNetworkAnimation from './../NeuralNetworkAnimation.svelte';
 	import Sidebar from '../routes/sidebar/Sidebar.svelte';
+	import Footer from '$lib/Footer.svelte';
 
 	let i = 0;
 	let txts = [
@@ -202,11 +203,7 @@
 	</section>
 </main>
 
-<footer class="text-center py-6 bg-gray-800 text-white">
-	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
-		>(359) 0888187905</a
-	>
-</footer>
+<Footer />
 
 <style>
 	header,
@@ -283,20 +280,51 @@
 
 	.cta {
 		margin-top: 10px;
-		padding: 10px 15px; /* Decrease the width by reducing the padding */
-		background-color: #b57edc; /* Lavender */
+		padding: 10px 15px;
+		background-color: #b57edc;
 		color: black;
 		text-decoration: none;
 		border-radius: 5px;
 		margin-right: 10px;
-		transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
+		transition: all 0.3s ease-in-out;
 	}
 
 	.cta:hover {
-		background-color: #008080; /* Teal */
-		color: gold; /* Keep the text color white on hover */
-		transform: scale(1.05); /* Increase the size of the button on hover */
+		background-color: #008080;
+		color: gold;
+		transform: scale(1.05);
 	}
+
+	/* Updated CSS for the Recent Project and My Skills sections */
+	.projects,
+	.skills {
+		background-color: #b57edc;
+		color: white;
+		padding: 10px;
+	}
+
+	.projects h2,
+	.skills h2,
+	.projects p,
+	.skills p {
+		color: white;
+	}
+
+	.projects a,
+	.skills a {
+		color: white;
+		background-color: transparent;
+		text-decoration: none;
+		border-radius: 5px;
+		padding: 10px 15px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.projects a:hover,
+	.skills a:hover {
+		color: gold;
+	}
+
 	.logo-image {
 		height: 100px;
 		width: auto;
