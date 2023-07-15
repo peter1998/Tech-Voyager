@@ -206,8 +206,7 @@
 <Footer />
 
 <style>
-	header,
-	footer {
+	header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -295,24 +294,27 @@
 		transform: scale(1.05);
 	}
 
-	/* Updated CSS for the Recent Project and My Skills sections */
 	.projects,
-	.skills {
-		background-color: #b57edc;
+	.skills,
+	.cta {
+		background-color: #2d3748;
 		color: white;
 		padding: 10px;
 	}
 
 	.projects h2,
 	.skills h2,
+	.cta h2,
 	.projects p,
-	.skills p {
+	.skills p,
+	.cta p {
 		color: white;
 	}
 
 	.projects a,
-	.skills a {
-		color: white;
+	.skills a,
+	.cta a {
+		color: black;
 		background-color: transparent;
 		text-decoration: none;
 		border-radius: 5px;
@@ -320,8 +322,14 @@
 		transition: all 0.3s ease-in-out;
 	}
 
+	.projects:hover,
+	.skills:hover {
+		background-color: #008080;
+	}
+
 	.projects a:hover,
-	.skills a:hover {
+	.skills a:hover,
+	.cta a:hover {
 		color: gold;
 	}
 
@@ -330,7 +338,6 @@
 		width: auto;
 	}
 
-	/* Add CSS for the loader */
 	.loader {
 		position: fixed;
 		top: 0;
@@ -416,6 +423,7 @@
 		font-weight: bold;
 		color: #fff;
 	}
+
 	@keyframes fade {
 		0%,
 		100% {
@@ -433,5 +441,30 @@
 		100% {
 			transform: rotate(360deg);
 		}
+	}
+
+	.projects,
+	.skills,
+	.projects .card {
+		transition: all 0.3s ease-in-out;
+	}
+
+	.projects:hover,
+	.skills:hover {
+		background-color: #008080; /* change this to the color you want */
+		color: gold;
+		transform: scale(1.05);
+	}
+
+	.projects .card:hover {
+		background-color: #008080; /* change this to the color you want */
+		color: gold;
+		transform: scale(1.05);
+	}
+
+	.projects:hover a,
+	.skills:hover a,
+	.projects .card:hover a {
+		color: gold;
 	}
 </style>
