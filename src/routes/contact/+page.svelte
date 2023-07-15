@@ -112,6 +112,9 @@
 		margin-right: auto;
 		width: 50%;
 		padding: 20px;
+		background-color: #f1f1f1;
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	}
 
 	.contact-details {
@@ -121,9 +124,10 @@
 	}
 
 	.contact-item {
-		background-color: #f1f1f1;
+		background-color: #fff;
 		padding: 10px;
 		border-radius: 5px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	}
 
 	#contact-form input,
@@ -156,6 +160,11 @@
 		text-align: center;
 		color: #fff;
 		font-size: 2em; /* Adjust this value to make the icons larger */
+		transition: background-color 0.3s ease;
+	}
+
+	.social-links a:hover {
+		background-color: #f1f1f1;
 	}
 
 	.social-links .icon.youtube {
