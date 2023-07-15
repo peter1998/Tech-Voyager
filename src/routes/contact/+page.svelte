@@ -27,7 +27,7 @@
 			<div class="contact-item">
 				<h3><FontAwesomeIcon icon={faMapMarkerAlt} /> Address</h3>
 				<p>
-					Peter Matov<br />PO Box 16122 Collins Street West,<br />Victoria 8007, United States.
+					Peter Matov<br />Druzhba 1, block 168<br />Sofia, Bulgaria
 				</p>
 			</div>
 			<div class="contact-item">
@@ -67,11 +67,20 @@
 
 		<h3>Drop Me a Line</h3>
 		<p>Have a question or want to work together? Just fill out the form below!</p>
-		<form id="contact-form">
-			<input name="name" type="text" id="name" placeholder="Your Name..." />
-			<input name="email" type="text" id="email" placeholder="Your Email..." />
-			<textarea name="message" id="message" cols="45" rows="5" placeholder="Your Message..." />
-			<input type="submit" name="button" id="button" value="say hello!" />
+		<form action="https://formspree.io/f/xeqbqbdg" method="POST">
+			<label>
+				Your Name:
+				<input type="text" name="name" id="name" placeholder="Your Name..." />
+			</label>
+			<label>
+				Your Email:
+				<input type="email" name="email" id="email" placeholder="Your Email..." />
+			</label>
+			<label>
+				Your Message:
+				<textarea name="message" id="message" cols="45" rows="5" placeholder="Your Message..." />
+			</label>
+			<button type="submit" name="button" id="button">Say hello!</button>
 		</form>
 	</section>
 </main>
