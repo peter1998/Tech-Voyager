@@ -8,25 +8,25 @@
 		{
 			title: 'Problem Solving - Mountain Hiking',
 			content: `Mountain hiking has taught me the importance of problem-solving and adaptability. When faced with a difficult trail or unexpected weather conditions, I've learned to think on my feet and make quick decisions.`,
-			image: '/path/to/problem_solving.jpg',
+			image: '/public/images/Sucess/climb_me.jpg',
 			showImage: false
 		},
 		{
 			title: 'Teamwork - Group Hiking',
 			content: `Hiking often involves teamwork, especially on more challenging trails. I've learned to work effectively in a team, communicate clearly, and support others when they're struggling.`,
-			image: '/path/to/teamwork.jpg',
+			image: '/public/images/Sucess/climb_vesko.jpg',
 			showImage: false
 		},
 		{
 			title: 'Attention to Detail - Mountain Photography',
 			content: `Photographing the mountains has honed my attention to detail. I've learned to notice small details in the landscape and capture them in a way that tells a story.`,
-			image: '/path/to/attention_to_detail.jpg',
+			image: '/public/images/Sucess/ciconia_nigra.jpg',
 			showImage: false
 		},
 		{
 			title: 'Sustainability - Mountain Conservation',
 			content: `My interest in mountain conservation has made me passionate about sustainability. I strive to incorporate sustainable practices into my work and personal life.`,
-			image: '/path/to/sustainability.jpg',
+			image: '/public/images/Sucess/rusamski_livadi.jpg',
 			showImage: false
 		}
 	];
