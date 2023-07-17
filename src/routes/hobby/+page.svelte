@@ -35,22 +35,15 @@
 		sections[index].showImage = !sections[index].showImage;
 	}
 
-	let isLoading = true;
+	let backgroundImage = '/public/images/Mountains/Vitosha.jpeg';
 
-	onMount(async () => {
-		await new Promise((r) => setTimeout(r, 4000));
-		isLoading = false;
+	onMount(() => {
+		document.body.style.backgroundImage = `url(${backgroundImage})`;
+		document.body.style.backgroundSize = 'cover';
 	});
 </script>
 
-{#if isLoading}
-	<div class="loading-screen">PETER HOBBY...</div>
-{:else}
-	<!-- Your content here -->
-{/if}
-
 <Header />
-
 <Sidebar />
 
 <div class="container">
@@ -154,7 +147,6 @@
 		background-color: #333;
 		color: #fff;
 		font-size: 2em;
-		background-image: url('/public/images/Mountains/Vitosha.jpeg');
 		background-size: cover;
 	}
 
