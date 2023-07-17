@@ -199,13 +199,26 @@
 
 	/* CSS for smaller screens */
 	@media (max-width: 767px) {
-		.cv-container {
-			width: 100%;
-			height: auto;
+		.background {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			justify-content: space-between;
 		}
 
 		main {
 			margin-left: 0;
+			height: auto;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.cv-container {
+			width: 100%;
+			height: auto;
+			padding: 10px;
 		}
 	}
 </style>
