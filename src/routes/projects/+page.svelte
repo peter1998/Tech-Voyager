@@ -156,7 +156,7 @@
 		text-align: center;
 	}
 	main {
-		margin-left: 250px; /* Adjust this value based on the width of your sidebar */
+		margin-left: 150px; /* Adjust this value based on the width of your sidebar */
 		padding: 20px;
 	}
 
@@ -268,6 +268,9 @@
 
 	/* CSS for smaller screens */
 	@media (max-width: 767px) {
+		main {
+			margin-left: 0; /* Remove the left margin on smaller screens */
+		}
 		.project-list {
 			display: flex;
 			flex-direction: column;
