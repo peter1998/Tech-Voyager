@@ -213,4 +213,32 @@
 	.social-links .icon.github {
 		color: #fff;
 	}
+
+	@media (min-width: 768px) {
+		.contact-details {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.social-links {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	/* CSS for smaller screens */
+	@media (max-width: 767px) {
+		.contact-details {
+			display: block;
+		}
+
+		.social-links {
+			display: block;
+			text-align: center; /* Center the icons on smaller screens */
+		}
+
+		.social-links .icon {
+			font-size: 1.5em; /* Adjust this value to make the icons smaller on smaller screens */
+		}
+	}
 </style>

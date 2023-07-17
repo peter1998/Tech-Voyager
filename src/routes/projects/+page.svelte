@@ -252,4 +252,33 @@
 		border-radius: 5px;
 		margin: 5px;
 	}
+
+	@media (min-width: 768px) {
+		.project-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.project-card {
+			flex: 0 0 calc(50% - 20px); /* Adjust this value based on the desired number of cards per row and the desired gap between cards */
+			margin-bottom: 20px; /* Adjust this value based on the desired gap between cards */
+		}
+	}
+
+	/* CSS for smaller screens */
+	@media (max-width: 767px) {
+		.project-list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.project-card {
+			width: 90%; /* Make the cards 90% of the width on smaller screens */
+			margin-bottom: 20px; /* Adjust this value based on the desired gap between cards */
+			margin-left: auto; /* Center the cards */
+			margin-right: auto; /* Center the cards */
+		}
+	}
 </style>
