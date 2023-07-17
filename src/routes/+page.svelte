@@ -477,4 +477,24 @@
 		color: gold;
 		transform: scale(1.05);
 	}
+	@media (max-width: 768px) {
+		.hero h1 {
+			font-size: 2rem;
+		}
+
+		.typing-container {
+			width: 90%;
+			font-size: 1.2em;
+		}
+
+		.skills ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.projects ul {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
 </style>
