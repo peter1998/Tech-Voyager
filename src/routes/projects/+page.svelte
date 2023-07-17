@@ -108,7 +108,7 @@
 	<p>Here are some of the projects I've worked on:</p>
 
 	<ul class="project-list">
-		{#each projects as project (project.name)}
+		{#each projects as project, index (project.name)}
 			<li class="project-card">
 				<img src={project.image} alt={project.name} class="project-image" />
 				<h2>{project.name}</h2>
@@ -123,7 +123,11 @@
 
 				<div class="project-links">
 					<a href={project.url} target="_blank" class="project-link">View on GitHub</a>
-					<a href={project.liveUrl} target="_blank" class="project-link">Live Site</a>
+					{#if index < 3}
+						<button disabled class="project-link">Currently Not Live</button>
+					{:else}
+						<a href={project.liveUrl} target="_blank" class="project-link">Live Site</a>
+					{/if}
 				</div>
 			</li>
 		{/each}
@@ -133,46 +137,6 @@
 <Footer />
 
 <style>
-	.social-links {
-		display: flex;
-		justify-content: space-around;
-		width: 60%; /* Adjust this value to increase or decrease spacing between icons */
-	}
-
-	.social-links a {
-		color: #fff;
-		font-size: 2em; /* Adjust this value to make the icons larger */
-		transition: color 0.3s ease;
-	}
-
-	.social-links a:hover {
-		color: #f1f1f1;
-	}
-
-	.social-links .icon.youtube {
-		color: #ff0000;
-	}
-
-	.social-links .icon.facebook {
-		color: #3b5998;
-	}
-
-	.social-links .icon.linkedin {
-		color: #0e76a8;
-	}
-
-	.social-links .icon.github {
-		color: #fff;
-	}
-
-	.social-links .icon.instagram {
-		color: #e1306c;
-	}
-	nav a {
-		color: #fff;
-		text-decoration: none;
-	}
-
 	a {
 		display: inline-block;
 		margin-top: 10px;
@@ -287,15 +251,5 @@
 		padding: 5px 10px;
 		border-radius: 5px;
 		margin: 5px;
-	}
-
-	.project-details-button {
-		background-color: #333;
-		color: #fff;
-		padding: 10px 20px;
-		border-radius: 5px;
-		margin-top: 1rem;
-		border: none;
-		cursor: pointer;
 	}
 </style>
