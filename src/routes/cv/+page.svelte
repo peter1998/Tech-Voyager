@@ -185,4 +185,27 @@
 			background-position: 100px 50px;
 		}
 	}
+
+	@media (min-width: 768px) {
+		.cv-container {
+			width: 600px;
+			height: 400px;
+		}
+
+		main {
+			margin-left: 250px;
+		}
+	}
+
+	/* CSS for smaller screens */
+	@media (max-width: 767px) {
+		.cv-container {
+			width: 100%;
+			height: auto;
+		}
+
+		main {
+			margin-left: 0;
+		}
+	}
 </style>
