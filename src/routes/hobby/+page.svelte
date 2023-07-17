@@ -6,33 +6,27 @@
 
 	let sections = [
 		{
-			title: 'Bulgarian Mountains',
-			content: `Bulgaria is home to several mountain ranges that offer breathtaking views and challenging hikes. From the Balkan Mountains to the Rhodopes, each range has its unique characteristics and trails.`,
-			image: '/path/to/bulgarian_mountains.jpg',
+			title: 'Problem Solving - Mountain Hiking',
+			content: `Mountain hiking has taught me the importance of problem-solving and adaptability. When faced with a difficult trail or unexpected weather conditions, I've learned to think on my feet and make quick decisions.`,
+			image: '/path/to/problem_solving.jpg',
 			showImage: false
 		},
 		{
-			title: 'Mountain Hiking',
-			content: `Mountain hiking is a great way to enjoy the natural beauty of Bulgaria. It provides a physical challenge and the reward of stunning views from the top.`,
-			image: '/path/to/mountain_hiking.jpg',
+			title: 'Teamwork - Group Hiking',
+			content: `Hiking often involves teamwork, especially on more challenging trails. I've learned to work effectively in a team, communicate clearly, and support others when they're struggling.`,
+			image: '/path/to/teamwork.jpg',
 			showImage: false
 		},
 		{
-			title: 'Mountain Gear',
-			content: `Proper gear is essential for a safe and enjoyable mountain hiking experience. This includes appropriate clothing, hiking boots, a backpack, and navigation tools.`,
-			image: '/path/to/mountain_gear.jpg',
+			title: 'Attention to Detail - Mountain Photography',
+			content: `Photographing the mountains has honed my attention to detail. I've learned to notice small details in the landscape and capture them in a way that tells a story.`,
+			image: '/path/to/attention_to_detail.jpg',
 			showImage: false
 		},
 		{
-			title: 'Mountain Photography',
-			content: `Mountain photography allows you to capture the majestic beauty of the mountains. It's a great way to share your experiences and the stunning landscapes you encounter during your hikes.`,
-			image: '/path/to/mountain_photography.jpg',
-			showImage: false
-		},
-		{
-			title: 'Mountain Conservation',
-			content: `Mountain conservation is crucial to preserving these natural wonders for future generations. It involves protecting the wildlife, maintaining the trails, and promoting sustainable tourism practices.`,
-			image: '/path/to/mountain_conservation.jpg',
+			title: 'Sustainability - Mountain Conservation',
+			content: `My interest in mountain conservation has made me passionate about sustainability. I strive to incorporate sustainable practices into my work and personal life.`,
+			image: '/path/to/sustainability.jpg',
 			showImage: false
 		}
 	];
@@ -40,7 +34,20 @@
 	function toggleImage(index) {
 		sections[index].showImage = !sections[index].showImage;
 	}
+
+	let isLoading = true;
+
+	onMount(async () => {
+		await new Promise((r) => setTimeout(r, 4000));
+		isLoading = false;
+	});
 </script>
+
+{#if isLoading}
+	<div class="loading-screen">PETER HOBBY...</div>
+{:else}
+	<!-- Your content here -->
+{/if}
 
 <Header />
 
@@ -111,6 +118,62 @@
 		}
 		to {
 			opacity: 1;
+		}
+	}
+
+	button {
+		background-color: #008cba; /* Blue */
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+		transition-duration: 0.4s;
+	}
+
+	button:hover {
+		background-color: white;
+		color: black;
+		border: 2px solid #008cba;
+	}
+
+	.loading-screen {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #333;
+		color: #fff;
+		font-size: 2em;
+		background-image: url('/public/images/Mountains/Vitosha.jpeg');
+		background-size: cover;
+	}
+
+	.loading-screen::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+	}
+
+	@keyframes climb {
+		0% {
+			transform: translateY(100%);
+		}
+		100% {
+			transform: translateY(-100%);
 		}
 	}
 </style>
