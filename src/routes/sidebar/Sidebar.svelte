@@ -43,9 +43,10 @@
 	.sidebar-container {
 		position: fixed;
 		left: 0;
-		top: 0;
+		top: 50%; /* Adjust this to start from the middle of the screen */
+		transform: translateY(-50%); /* This will center the sidebar vertically */
 		width: 220px; /* Increase the width for more space */
-		height: 100vh;
+		height: auto; /* Let the height be determined by its content */
 		background-color: #f5f5f5;
 		padding: 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

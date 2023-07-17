@@ -17,6 +17,8 @@
 <style>
 	.header {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: space-around;
 		background-color: #9be2d5;
 		color: #fff;
@@ -38,5 +40,41 @@
 	.header a:hover {
 		background-color: #fff;
 		color: #333;
+	}
+
+	@media (min-width: 600px) {
+		.header {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		.header a {
+			margin-right: 10px;
+			margin-bottom: 0;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.header a {
+			padding: 10px 30px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.header a {
+			padding: 10px 40px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.header a {
+			padding: 10px 50px;
+		}
+	}
+
+	@media (min-width: 1400px) {
+		.header a {
+			padding: 10px 60px;
+		}
 	}
 </style>
