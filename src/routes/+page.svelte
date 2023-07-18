@@ -1,9 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import * as THREE from 'three';
-	import NeuralNetworkAnimation from './../NeuralNetworkAnimation.svelte';
-	import Sidebar from '../routes/sidebar/Sidebar.svelte';
+
 	import Footer from '$lib/Footer.svelte';
 
 	let i = 0;
@@ -57,11 +55,6 @@
 
 	let squares = Array(100).fill(0);
 </script>
-
-<!-- {#if showAnimation}
-	<!-- Only show the animation if showAnimation is true -->
-<!-- <NeuralNetworkAnimation /> -->
-<!-- {/if} -->
 
 <div id="animation" />
 <div class="loader" style="display: {loading ? 'flex' : 'none'};">
