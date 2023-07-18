@@ -7,7 +7,7 @@
 	let sections = [
 		{
 			title: 'Problem Solving - Mountain Hiking',
-			content: `Just like debugging a complex piece of code, mountain hiking has taught me the critical importance of problem-solving and adaptability. Confronted with a difficult trail or unexpected weather conditions, I've learned to evaluate my situation, consider various solutions, and make quick, informed decisions. This adaptability has proven invaluable in my coding career, enabling me to efficiently navigate through challenging problems and deliver effective solutions.`,
+			content: `Just like debugging a complex piece of code, mountain hiking has taught me the critical importance of problem-solving and adaptability. Confronted with a difficult trail or unexpected weather conditions, I've learned to evaluate my situation, consider various solutions, and make quick, informed decisions. This adaptability has proven invaluable in my coding career, enabling me to efficiently navigate through challenging problems and deliver effective solutions. Furthermore, both hiking and coding require a keen analytical mind. When facing a steep climb or a complex coding problem, I break down the challenge into manageable parts, tackling each step or bug one at a time. This systematic approach helps me overcome obstacles and continuously move forward.`,
 
 			images: [
 				'/public/images/Sucess/climb_me.jpg',
@@ -21,7 +21,7 @@
 		},
 		{
 			title: 'Teamwork - Group Hiking',
-			content: `Hiking often involves teamwork, especially on more demanding trails. The importance of clear communication, shared responsibilities, and mutual support in a group hike parallels the dynamics of an effective dev team. I've honed my ability to collaborate closely with others, ensuring we're all moving towards the same goal, just like working on a complex software project.`,
+			content: `Hiking often involves teamwork, especially on more demanding trails. The importance of clear communication, shared responsibilities, and mutual support in a group hike parallels the dynamics of an effective dev team. I've honed my ability to collaborate closely with others, ensuring we're all moving towards the same goal, just like working on a complex software project. Additionally, in both scenarios, trust plays a vital role. On the trail or in a team project, I've learned that trusting my team's abilities and judgment leads to a more cohesive group dynamic and ultimately a more successful outcome. Group hiking has also taught me the importance of diversity in a team. Just as a diverse group of hikers can tackle a wide range of terrains, a diverse team of developers can bring a wider range of solutions and perspectives to a project.`,
 			images: [
 				'/public/images/Sucess/climb_vesko.jpg',
 				'/public/images/Sucess/climb_vesko2.jpg',
@@ -33,7 +33,7 @@
 		},
 		{
 			title: 'Attention to Detail - Mountain Photography',
-			content: `Photographing the mountains has fine-tuned my attention to detail, a crucial skill in software development. From capturing the subtle play of light on a landscape to noticing the intricate patterns in the bark of a tree, my photography experience has trained me to observe and appreciate the smallest details. In programming, this has translated into writing cleaner code, catching bugs early, and improving user experience with nuanced improvements.`,
+			content: `Photographing the mountains has fine-tuned my attention to detail, a crucial skill in software development. From capturing the subtle play of light on a landscape to noticing the intricate patterns in the bark of a tree, my photography experience has trained me to observe and appreciate the smallest details. In programming, this has translated into writing cleaner code, catching bugs early, and improving user experience with nuanced improvements. Similarly, both fields require a certain level of creativity. Whether I'm framing a shot or designing a software solution, I constantly strive to bring a unique and creative approach to my work. The patience and perseverance required in capturing the perfect shot mirrors the dedication needed to refine a piece of code, enhancing its efficiency and readability.`,
 			images: [
 				'/public/images/Sucess/ciconia_nigra.jpg',
 				'/public/images/Sucess/real_ciconia.jpg',
@@ -45,7 +45,7 @@
 		},
 		{
 			title: 'Sustainability - Mountain Conservation',
-			content: `My interest in mountain conservation has sparked a passion for sustainability, a concept I incorporate into my work and personal life. In coding, this translates into writing efficient, maintainable code and advocating for sustainable tech practices, like reducing energy consumption and electronic waste. I believe that as tech professionals, we have a responsibility to ensure the digital world is as sustainable as the world we want to enjoy while hiking.`,
+			content: `My interest in mountain conservation has sparked a passion for sustainability, a concept I incorporate into my work and personal life. In coding, this translates into writing efficient, maintainable code and advocating for sustainable tech practices, like reducing energy consumption and electronic waste. I believe that as tech professionals, we have a responsibility to ensure the digital world is as sustainable as the world we want to enjoy while hiking. Beyond code, I aim to foster a sustainable work environment by promoting practices like regular breaks and work-life balance, which I believe contribute to long-term productivity and employee wellness. I am committed to creating software solutions that not only meet the present needs of users but also consider the long-term impact on the environment and society.`,
 			images: [
 				'/public/images/Sucess/rusamski_livadi.jpg',
 				'/public/images/Sucess/beli_vruh.jpg',
@@ -91,13 +91,15 @@
 	{#each sections as section, index (index)}
 		<div class="section" style="animation-delay: {index * 0.5}s">
 			<h2 class="section-title">{section.title}</h2>
-			<p class="section-content">{section.content}</p>
-			{#if section.showImage}
-				<div class="section-image">
-					<img src={section.images[section.currentImageIndex]} alt={section.title} />
-					<button on:click={() => changeImage(index)}>Change Picture</button>
-				</div>
-			{/if}
+			<div class="section-content-and-image">
+				<p class="section-content">{section.content}</p>
+				{#if section.showImage}
+					<div class="section-image">
+						<img src={section.images[section.currentImageIndex]} alt={section.title} />
+						<button on:click={() => changeImage(index)}>Change Picture</button>
+					</div>
+				{/if}
+			</div>
 			<button on:click={() => toggleImage(index)}
 				>{section.showImage ? 'Hide Picture' : 'Show Picture'}</button
 			>
@@ -133,19 +135,28 @@
 	}
 
 	.section-content {
+		flex: 1;
+		margin-right: 10px;
 		line-height: 1.5;
 		margin-bottom: 10px;
 	}
 
 	.section-image {
-		width: 100%;
+		flex: 0 0 50%; /* This makes the image container take up half the width */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
 	}
 
 	.section-image img {
-		width: 50%; /* Adjust this to change the image size */
+		width: 100%; /* Make the image take up the full width of its container */
 		height: auto;
 		object-fit: cover;
-		margin: 0 auto; /* Center the image */
+	}
+
+	.section-image button {
+		margin-top: 10px; /* Add some spacing between image and button */
 	}
 
 	@keyframes fadeIn {
@@ -203,31 +214,6 @@
 		transition: 0s;
 	}
 
-	.loading-screen {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: #333;
-		color: #fff;
-		font-size: 2em;
-		background-size: cover;
-	}
-
-	.loading-screen::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-	}
-
 	@keyframes climb {
 		0% {
 			transform: translateY(100%);
@@ -240,5 +226,11 @@
 	.section:hover {
 		transform: scale(1.02);
 		transition: transform 0.3s ease;
+	}
+
+	.section-content-and-image {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
 	}
 </style>
