@@ -5,7 +5,7 @@
 	import Sidebar from '../sidebar/Sidebar.svelte';
 
 	let index = 0;
-	const images = ['/public/images/Sucess/deer-load.jpg', '/public/images/Sucess/deer.jpg'];
+	const images = ['/images/Sucess/deer-load.jpg', '/images/Sucess/deer.jpg'];
 
 	function changeBackground() {
 		index = (index + 1) % images.length;
@@ -39,7 +39,7 @@
 		height: 100vh; /* take the full viewport height */
 		text-align: center;
 		background-color: #f5f5f5;
-		background-image: url(/public/images/Sucess/deer-load.jpg); /* Initial image */
+		background-image: url(/images/Sucess/deer-load.jpg); /* Initial image */
 		background-size: cover; /* Cover the entire container */
 		background-position: center; /* Center the image */
 		transition: background-image 2s ease-in-out; /* Smooth transition between images */
