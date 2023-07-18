@@ -4,27 +4,24 @@
 	import Header from '$lib/Header.svelte';
 	import Sidebar from '../sidebar/Sidebar.svelte';
 
-	import climb_me from '/public/images/Sucess/climb_me.jpg';
-	import musala_vuje from '/public/images/Sucess/musala_vuje.jpg';
-	import rila from '/public/images/Sucess/rila.jpg';
-	import musa from '/public/images/Sucess/musa.jpg';
-	import musala_skakavci from '/public/images/Sucess/musala_skakavci.jpg';
+	let climb_me = '/public/images/Sucess/climb_me.jpg';
+	let musala_vuje = '/public/images/Sucess/musala_vuje.jpg';
+	let rila = '/public/images/Sucess/rila.jpg';
+	let musa = '/public/images/Sucess/musa.jpg';
+	let musala_skakavci = '/public/images/Sucess/musala_skakavci.jpg';
 
-	import climb_vesko from '/public/images/Sucess/climb_vesko.jpg';
-	import climb_vesko2 from '/public/images/Sucess/climb_vesko2.jpg';
-	import musala_izgrev from '/public/images/Sucess/musala_izgrev.jpg';
+	let climb_vesko = '/public/images/Sucess/climb_vesko.jpg';
+	let climb_vesko2 = '/public/images/Sucess/climb_vesko2.jpg';
+	let musala_izgrev = '/public/images/Sucess/musala_izgrev.jpg';
 
-	import ciconia_nigra from '/public/images/Sucess/ciconia_nigra.jpg';
-
-	//import real_ciconia from '/public/images/Sucess/real_ciconia.jpg';
-	import orel from '/public/images/Sucess/orel.jpg';
-	import plato from '/public/images/Sucess/plato.jpg';
-
-	import rusamski_livadi from '/public/images/Sucess/rusamski_livadi.jpg';
-	import beli_vruh from '/public/images/Sucess/beli_vruh.jpg';
-	import bike from '/public/images/Sucess/bike.jpg';
-
+	let ciconia_nigra = '/public/images/Sucess/ciconia_nigra.jpg';
 	let real_ciconia = '/public/images/Sucess/real_ciconia.jpg';
+	let orel = '/public/images/Sucess/orel.jpg';
+	let plato = '/public/images/Sucess/plato.jpg';
+
+	let rusamski_livadi = '/public/images/Sucess/rusamski_livadi.jpg';
+	let beli_vruh = '/public/images/Sucess/beli_vruh.jpg';
+	let bike = '/public/images/Sucess/bike.jpg';
 
 	let sections = [
 		{
