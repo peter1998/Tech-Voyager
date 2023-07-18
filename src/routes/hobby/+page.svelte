@@ -15,6 +15,7 @@
 	import musala_izgrev from '/public/images/Sucess/musala_izgrev.jpg';
 
 	import ciconia_nigra from '/public/images/Sucess/ciconia_nigra.jpg';
+
 	import real_ciconia from '/public/images/Sucess/real_ciconia.jpg';
 	import orel from '/public/images/Sucess/orel.jpg';
 	import plato from '/public/images/Sucess/plato.jpg';
