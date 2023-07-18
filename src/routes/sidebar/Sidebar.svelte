@@ -33,6 +33,13 @@
 				</a>
 			</li>
 
+			<li>
+				<a href="/trailcameras" on:click|preventDefault={() => navigateTo('/trailcameras')}>
+					<i class="fas fa-camera" />
+					<span>Trail Cameras Monitoring Wildlife</span>
+				</a>
+			</li>
+
 			<!-- Add more links here -->
 		</ul>
 	</nav>
@@ -112,16 +119,15 @@
 		transform: rotate(180deg);
 	}
 
-	/* Styling for the sidebar icon */
-	.expanded .fa-chevron-left {
-		transform: rotate(180deg);
-	}
-
 	.collapsed .fa-chevron-right {
 		transform: rotate(180deg);
 	}
 
 	.fa-hiking {
+		margin-right: 10px; /* Add right margin for spacing */
+	}
+
+	.fa-camera {
 		margin-right: 10px; /* Add right margin for spacing */
 	}
 </style>

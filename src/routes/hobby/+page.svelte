@@ -7,25 +7,25 @@
 	let sections = [
 		{
 			title: 'Problem Solving - Mountain Hiking',
-			content: `Mountain hiking has taught me the importance of problem-solving and adaptability. When faced with a difficult trail or unexpected weather conditions, I've learned to think on my feet and make quick decisions.`,
+			content: `Just like debugging a complex piece of code, mountain hiking has taught me the critical importance of problem-solving and adaptability. Confronted with a difficult trail or unexpected weather conditions, I've learned to evaluate my situation, consider various solutions, and make quick, informed decisions. This adaptability has proven invaluable in my coding career, enabling me to efficiently navigate through challenging problems and deliver effective solutions.`,
 			image: '/public/images/Sucess/climb_me.jpg',
 			showImage: false
 		},
 		{
 			title: 'Teamwork - Group Hiking',
-			content: `Hiking often involves teamwork, especially on more challenging trails. I've learned to work effectively in a team, communicate clearly, and support others when they're struggling.`,
+			content: `Hiking often involves teamwork, especially on more demanding trails. The importance of clear communication, shared responsibilities, and mutual support in a group hike parallels the dynamics of an effective dev team. I've honed my ability to collaborate closely with others, ensuring we're all moving towards the same goal, just like working on a complex software project.`,
 			image: '/public/images/Sucess/climb_vesko.jpg',
 			showImage: false
 		},
 		{
 			title: 'Attention to Detail - Mountain Photography',
-			content: `Photographing the mountains has honed my attention to detail. I've learned to notice small details in the landscape and capture them in a way that tells a story.`,
+			content: `Photographing the mountains has fine-tuned my attention to detail, a crucial skill in software development. From capturing the subtle play of light on a landscape to noticing the intricate patterns in the bark of a tree, my photography experience has trained me to observe and appreciate the smallest details. In programming, this has translated into writing cleaner code, catching bugs early, and improving user experience with nuanced improvements.`,
 			image: '/public/images/Sucess/ciconia_nigra.jpg',
 			showImage: false
 		},
 		{
 			title: 'Sustainability - Mountain Conservation',
-			content: `My interest in mountain conservation has made me passionate about sustainability. I strive to incorporate sustainable practices into my work and personal life.`,
+			content: `My interest in mountain conservation has sparked a passion for sustainability, a concept I incorporate into my work and personal life. In coding, this translates into writing efficient, maintainable code and advocating for sustainable tech practices, like reducing energy consumption and electronic waste. I believe that as tech professionals, we have a responsibility to ensure the digital world is as sustainable as the world we want to enjoy while hiking.`,
 			image: '/public/images/Sucess/rusamski_livadi.jpg',
 			showImage: false
 		}
@@ -100,9 +100,10 @@
 	}
 
 	.section-image img {
-		width: 100%;
+		width: 50%; /* Adjust this to change the image size */
 		height: auto;
 		object-fit: cover;
+		margin: 0 auto; /* Center the image */
 	}
 
 	@keyframes fadeIn {
@@ -167,5 +168,10 @@
 		100% {
 			transform: translateY(-100%);
 		}
+	}
+
+	.section:hover {
+		transform: scale(1.02);
+		transition: transform 0.3s ease;
 	}
 </style>

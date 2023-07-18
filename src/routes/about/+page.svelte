@@ -40,13 +40,13 @@
 	</section>
 
 	<section>
-		<h2>Education</h2>
+		<h2 class="white-bold">Education</h2>
 		<div class="education-con">
 			<div class="container-sub">
 				<div class="full-divider" />
 				<div class="row">
 					<div class="education-details" style="position: relative;">
-						<div class="col-3 icon-block" style="position: absolute; top: -50px;">
+						<div class="col-3 icon-block" style="position: absolute; top: -20px;">
 							<img
 								src="../../../../../public/images/Tu-sofia-logo.svg.png"
 								alt="Technical University of Sofia logo"
@@ -177,7 +177,7 @@
 	</section>
 
 	<section>
-		<h2>Skills</h2>
+		<h2 class="white-bold">Skills</h2>
 		<div class="skills-section px-3 px-lg-4">
 			<div class="row">
 				<div class="col-md-6">
@@ -360,8 +360,8 @@
 	</section>
 
 	<section>
-		<h2>Interests</h2>
-		<p>
+		<h2 class="white-bold">Interests</h2>
+		<p class="white-bold">
 			Following: Lex Fridman, Tony Robbins, Gary Vaynerchuk, Laszlo Bock, Andrew Huberman, Simon
 			Sinek
 		</p>
@@ -414,6 +414,16 @@
 <Footer />
 
 <style>
+	h2.white-bold {
+		color: white;
+		font-weight: bold;
+	}
+
+	p.white-bold {
+		color: white;
+		font-weight: bold;
+	}
+
 	.progress-bar {
 		transition: transform 0.5s;
 	}
