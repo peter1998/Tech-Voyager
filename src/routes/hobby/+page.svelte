@@ -8,31 +8,72 @@
 		{
 			title: 'Problem Solving - Mountain Hiking',
 			content: `Just like debugging a complex piece of code, mountain hiking has taught me the critical importance of problem-solving and adaptability. Confronted with a difficult trail or unexpected weather conditions, I've learned to evaluate my situation, consider various solutions, and make quick, informed decisions. This adaptability has proven invaluable in my coding career, enabling me to efficiently navigate through challenging problems and deliver effective solutions.`,
-			image: '/public/images/Sucess/climb_me.jpg',
+
+			images: [
+				'/public/images/Sucess/climb_me.jpg',
+				'/public/images/Sucess/musala_vuje.jpg',
+				'/public/images/Sucess/rila.jpg',
+				'/public/images/Sucess/musa.jpg',
+				'/public/images/Sucess/musala_skakavci.jpg'
+			],
+			currentImageIndex: 0,
 			showImage: false
 		},
 		{
 			title: 'Teamwork - Group Hiking',
 			content: `Hiking often involves teamwork, especially on more demanding trails. The importance of clear communication, shared responsibilities, and mutual support in a group hike parallels the dynamics of an effective dev team. I've honed my ability to collaborate closely with others, ensuring we're all moving towards the same goal, just like working on a complex software project.`,
-			image: '/public/images/Sucess/climb_vesko.jpg',
+			images: [
+				'/public/images/Sucess/climb_vesko.jpg',
+				'/public/images/Sucess/climb_vesko2.jpg',
+				'/public/images/Sucess/musala_izgrev.jpg',
+				'/public/images/Sucess/musala.jpg'
+			],
+
 			showImage: false
 		},
 		{
 			title: 'Attention to Detail - Mountain Photography',
 			content: `Photographing the mountains has fine-tuned my attention to detail, a crucial skill in software development. From capturing the subtle play of light on a landscape to noticing the intricate patterns in the bark of a tree, my photography experience has trained me to observe and appreciate the smallest details. In programming, this has translated into writing cleaner code, catching bugs early, and improving user experience with nuanced improvements.`,
-			image: '/public/images/Sucess/ciconia_nigra.jpg',
+			images: [
+				'/public/images/Sucess/ciconia_nigra.jpg',
+				'/public/images/Sucess/real_ciconia.jpg',
+				'/public/images/Sucess/orel.jpg',
+				'/public/images/Sucess/plato.jpg'
+			],
+
 			showImage: false
 		},
 		{
 			title: 'Sustainability - Mountain Conservation',
 			content: `My interest in mountain conservation has sparked a passion for sustainability, a concept I incorporate into my work and personal life. In coding, this translates into writing efficient, maintainable code and advocating for sustainable tech practices, like reducing energy consumption and electronic waste. I believe that as tech professionals, we have a responsibility to ensure the digital world is as sustainable as the world we want to enjoy while hiking.`,
-			image: '/public/images/Sucess/rusamski_livadi.jpg',
+			images: [
+				'/public/images/Sucess/rusamski_livadi.jpg',
+				'/public/images/Sucess/beli_vruh.jpg',
+				'/public/images/Sucess/bike.jpg'
+			],
+
 			showImage: false
 		}
 	];
 
+	function changeImage(index) {
+		sections[index].currentImageIndex =
+			(sections[index].currentImageIndex + 1) % sections[index].images.length;
+		console.log(
+			`Section ${index} image source: ${sections[index].images[sections[index].currentImageIndex]}`
+		);
+		sections = sections; // reassign sections to trigger reactivity
+	}
+
 	function toggleImage(index) {
 		sections[index].showImage = !sections[index].showImage;
+		if (sections[index].showImage && typeof sections[index].currentImageIndex === 'undefined') {
+			sections[index].currentImageIndex = 0;
+		}
+		if (sections[index].showImage) {
+			changeImage(index);
+		}
+		sections = [...sections]; // reassign sections to trigger reactivity
 	}
 
 	let backgroundImage = '/public/images/Mountains/Vitosha.jpeg';
@@ -53,7 +94,8 @@
 			<p class="section-content">{section.content}</p>
 			{#if section.showImage}
 				<div class="section-image">
-					<img src={section.image} alt={section.title} />
+					<img src={section.images[section.currentImageIndex]} alt={section.title} />
+					<button on:click={() => changeImage(index)}>Change Picture</button>
 				</div>
 			{/if}
 			<button on:click={() => toggleImage(index)}
