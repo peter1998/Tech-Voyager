@@ -16,7 +16,7 @@
 	import climb_vesko2 from '/public/images/Sucess/climb_vesko2.jpg';
 	import musala_izgrev from '/public/images/Sucess/musala_izgrev.jpg';
 
-	import ciconia_nigra from '../../../public/images/Sucess/ciconia_nigra.jpg';
+	//import ciconia_nigra from '../../../public/images/Sucess/ciconia_nigra.jpg';
 	import real_ciconia from '/public/images/Sucess/real_ciconia.jpg';
 	import orel from '/public/images/Sucess/orel.jpg';
 	import plato from '/public/images/Sucess/plato.jpg';
@@ -43,8 +43,8 @@
 		{
 			title: 'Attention to Detail - Mountain Photography',
 			content: `Photographing the mountains has fine-tuned my attention to detail, a crucial skill in software development. From capturing the subtle play of light on a landscape to noticing the intricate patterns in the bark of a tree, my photography experience has trained me to observe and appreciate the smallest details. In programming, this has translated into writing cleaner code, catching bugs early, and improving user experience with nuanced improvements. Similarly, both fields require a certain level of creativity. Whether I'm framing a shot or designing a software solution, I constantly strive to bring a unique and creative approach to my work. The patience and perseverance required in capturing the perfect shot mirrors the dedication needed to refine a piece of code, enhancing its efficiency and readability.`,
-			images: [ciconia_nigra, real_ciconia, orel, plato],
-
+			images: [real_ciconia, orel, plato],
+			// ciconia_nigra,
 			showImage: false
 		},
 		{
