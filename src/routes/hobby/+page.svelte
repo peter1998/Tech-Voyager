@@ -16,13 +16,15 @@
 
 	import ciconia_nigra from '/public/images/Sucess/ciconia_nigra.jpg';
 
-	import real_ciconia from '/public/images/Sucess/real_ciconia.jpg';
+	//import real_ciconia from '/public/images/Sucess/real_ciconia.jpg';
 	import orel from '/public/images/Sucess/orel.jpg';
 	import plato from '/public/images/Sucess/plato.jpg';
 
 	import rusamski_livadi from '/public/images/Sucess/rusamski_livadi.jpg';
 	import beli_vruh from '/public/images/Sucess/beli_vruh.jpg';
 	import bike from '/public/images/Sucess/bike.jpg';
+
+	let real_ciconia = '/public/images/Sucess/real_ciconia.jpg';
 
 	let sections = [
 		{

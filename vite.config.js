@@ -7,6 +7,7 @@ const config = {
 			allow: ['public']
 		}
 	},
+	assetsInclude: ['**/*.JPG', '**/*.jpg', '**/*.png', '**/*.svg', '**/*.jpeg'],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}
