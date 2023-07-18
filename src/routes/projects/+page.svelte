@@ -13,7 +13,7 @@
 	import Anaconda from '../../../public/images/logos/Anaconda.png';
 	import tf from '../../../public/images/logos/tf_logo.png';
 	import pandas from '../../../public/images/logos/pandas.png';
-	import python from '../../../public/images/logos/python.png';
+	import python from '../../../public/images/logos/Python.png';
 	import plotly from '../../../public/images/logos/Plotly.png';
 	import dash from '../../../public/images/logos/dash.png';
 	import redux from '../../../public/images/logos/redux.png';
