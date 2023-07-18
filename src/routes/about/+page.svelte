@@ -6,6 +6,15 @@
 	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/Header.svelte';
 
+	import ProfilePicture from '../../../public/images/9.jpg';
+	import TuSofiaLogo from '../../../public/images/Tu-sofia-logo.svg.png';
+	import LexFridman from '../../../public/images/lex-2.jpg';
+	import TonyRobinson from '../../../public/images/tony-robinson.jpg';
+	import GaryVaynerchuk from '../../../public/images/gary.jpg';
+	import LaszloBock from '../../../public/images/lazlo.jpg';
+	import AndrewHuberman from '../../../public/images/andrew.jpg';
+	import SimonSinek from '../../../public/images/simon-sinek.jpg';
+
 	onMount(() => {
 		AOS.init();
 	});
@@ -30,7 +39,7 @@
 			</div>
 			<div style="flex: 1;">
 				<!-- Add your photo here -->
-				<img src="../../../public/images/9.PNG" alt="Your Name" style="max-width: 100%;" />
+				<img src={ProfilePicture} alt="Your Name" style="max-width: 100%;" />
 			</div>
 		</div>
 		<div class="animated-text">
@@ -48,7 +57,7 @@
 					<div class="education-details" style="position: relative;">
 						<div class="col-3 icon-block" style="position: absolute; top: -20px;">
 							<img
-								src="../../../../../public/images/Tu-sofia-logo.svg.png"
+								src={TuSofiaLogo}
 								alt="Technical University of Sofia logo"
 								style="width: 50px; height: 50px;"
 							/>
@@ -368,40 +377,40 @@
 
 		<div class="interests-container">
 			<div class="person">
-				<img src="../../../public/images/lex-2.jpg" alt="Lex Fridman" />
+				<img src={LexFridman} alt="Lex Fridman" />
 				<blockquote>
 					"Programming is the art of algorithm design and the craft of debugging errant code."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="../../../public/images/tony-robinson.jpg" alt="Tony Robinson" />
+				<img src={TonyRobinson} alt="Tony Robinson" />
 				<blockquote>
 					"In programming, as in life, it's all about turning obstacles into opportunities."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="../../../public/images/gary.jpg" alt="Gary Vaynerchuk" />
+				<img src={GaryVaynerchuk} alt="Gary Vaynerchuk" />
 				<blockquote>
 					"Success in programming comes from combining creativity, hustle, and a deep understanding
 					of user needs."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="../../../public/images/lazlo.jpg" alt="Laszlo Bock" />
+				<img src={LaszloBock} alt="Laszlo Bock" />
 				<blockquote>
 					"Programming is not just about code; it's about solving problems and making a positive
 					impact on the world."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="../../../public/images/andrew.PNG" alt="Andrew Huberman" />
+				<img src={AndrewHuberman} alt="Andrew Huberman" />
 				<blockquote>
 					"The power of programming lies in its ability to transform ideas into reality and unlock
 					infinite possibilities."
 				</blockquote>
 			</div>
 			<div class="person">
-				<img src="../../../public/images/simon-sinek.jpg" alt="Simon Sinek" />
+				<img src={SimonSinek} alt="Simon Sinek" />
 				<blockquote>
 					"Programming is not just about writing code; it's about creating systems that inspire and
 					empower people."

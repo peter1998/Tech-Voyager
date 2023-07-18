@@ -4,11 +4,11 @@
 	import Sidebar from '../sidebar/Sidebar.svelte';
 	import { onMount } from 'svelte';
 
-	let images = [
-		'/public/images/Me/me-bike.jpg',
-		'/public/images/Me/me-iztok.jpg',
-		'/public/images/yoda.jpg'
-	];
+	import meBike from '/public/images/Me/me-bike.jpg';
+	import meIztok from '/public/images/Me/me-iztok.jpg';
+	import yoda from '/public/images/yoda.jpg';
+
+	let images = [meBike, meIztok, yoda];
 	let currentImageIndex = 0;
 
 	onMount(() => {
