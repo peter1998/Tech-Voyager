@@ -158,7 +158,8 @@
 	}
 
 	button {
-		background-color: #008cba; /* Blue */
+		position: relative;
+		background-color: #008cba;
 		border: none;
 		color: white;
 		padding: 15px 32px;
@@ -169,13 +170,37 @@
 		margin: 4px 2px;
 		cursor: pointer;
 		border-radius: 4px;
-		transition-duration: 0.4s;
+		transition: all 0.4s; /* transition on all properties */
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* shadow for 3D effect */
+		overflow: hidden;
 	}
 
 	button:hover {
 		background-color: white;
 		color: black;
 		border: 2px solid #008cba;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* less shadow on hover for press effect */
+	}
+
+	button:after {
+		content: '';
+		background: #f1f1f1;
+		display: block;
+		border-radius: 100%;
+		position: absolute;
+		padding-top: 300%;
+		padding-left: 350%;
+		margin-left: -20px !important;
+		margin-top: -120%;
+		opacity: 0;
+		transition: all 2s;
+	}
+
+	button:active:after {
+		padding: 0;
+		margin: 0;
+		opacity: 1;
+		transition: 0s;
 	}
 
 	.loading-screen {

@@ -34,7 +34,7 @@
 			</li>
 
 			<li>
-				<a href="/trailcameras" on:click|preventDefault={() => navigateTo('/trailcameras')}>
+				<a href="/trailcameras" on:click|preventDefault={() => navigateTo('/trail-cameras')}>
 					<i class="fas fa-camera" />
 					<span>Trail Cameras Monitoring Wildlife</span>
 				</a>
