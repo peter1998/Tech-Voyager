@@ -15,7 +15,7 @@
 	import pandas from '../../../public/images/logos/pandas.png';
 	import python from '../../../public/images/logos/Python.png';
 	import plotly from '../../../public/images/logos/Plotly.png';
-	import dash from '../../../public/images/logos/dash.png';
+	import dash from '../../../public/images/logos/Dash.png';
 	import redux from '../../../public/images/logos/redux.png';
 	import materialUi from '../../../public/images/logos/material-ui.png';
 	import Keras from '../../../public/images/logos/keras.png';
