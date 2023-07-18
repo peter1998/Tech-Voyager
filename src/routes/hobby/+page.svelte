@@ -4,53 +4,53 @@
 	import Header from '$lib/Header.svelte';
 	import Sidebar from '../sidebar/Sidebar.svelte';
 
+	//import backgroundImage from '/public/images/Mountains/Vitosha.jpeg';
+
+	import climb_me from '/public/images/Sucess/climb_me.jpg';
+	import musala_vuje from '/public/images/Sucess/musala_vuje.jpg';
+	import rila from '/public/images/Sucess/rila.jpg';
+	import musa from '/public/images/Sucess/musa.jpg';
+	import musala_skakavci from '/public/images/Sucess/musala_skakavci.jpg';
+
+	import climb_vesko from '/public/images/Sucess/climb_vesko.jpg';
+	import climb_vesko2 from '/public/images/Sucess/climb_vesko2.jpg';
+	import musala_izgrev from '/public/images/Sucess/musala_izgrev.jpg';
+
+	import ciconia_nigra from '/public/images/Sucess/ciconia_nigra.jpg';
+	import real_ciconia from '/public/images/Sucess/real_ciconia.jpg';
+	import orel from '/public/images/Sucess/orel.jpg';
+	import plato from '/public/images/Sucess/plato.jpg';
+
+	import rusamski_livadi from '/public/images/Sucess/rusamski_livadi.jpg';
+	import beli_vruh from '/public/images/Sucess/beli_vruh.jpg';
+	import bike from '/public/images/Sucess/bike.jpg';
 	let sections = [
 		{
 			title: 'Problem Solving - Mountain Hiking',
 			content: `Just like debugging a complex piece of code, mountain hiking has taught me the critical importance of problem-solving and adaptability. Confronted with a difficult trail or unexpected weather conditions, I've learned to evaluate my situation, consider various solutions, and make quick, informed decisions. This adaptability has proven invaluable in my coding career, enabling me to efficiently navigate through challenging problems and deliver effective solutions. Furthermore, both hiking and coding require a keen analytical mind. When facing a steep climb or a complex coding problem, I break down the challenge into manageable parts, tackling each step or bug one at a time. This systematic approach helps me overcome obstacles and continuously move forward.`,
 
-			images: [
-				'/public/images/Sucess/climb_me.jpg',
-				'/public/images/Sucess/musala_vuje.jpg',
-				'/public/images/Sucess/rila.jpg',
-				'/public/images/Sucess/musa.jpg',
-				'/public/images/Sucess/musala_skakavci.jpg'
-			],
+			images: [climb_me, musala_vuje, rila, musa, musala_skakavci],
 			currentImageIndex: 0,
 			showImage: false
 		},
 		{
 			title: 'Teamwork - Group Hiking',
 			content: `Hiking often involves teamwork, especially on more demanding trails. The importance of clear communication, shared responsibilities, and mutual support in a group hike parallels the dynamics of an effective dev team. I've honed my ability to collaborate closely with others, ensuring we're all moving towards the same goal, just like working on a complex software project. Additionally, in both scenarios, trust plays a vital role. On the trail or in a team project, I've learned that trusting my team's abilities and judgment leads to a more cohesive group dynamic and ultimately a more successful outcome. Group hiking has also taught me the importance of diversity in a team. Just as a diverse group of hikers can tackle a wide range of terrains, a diverse team of developers can bring a wider range of solutions and perspectives to a project.`,
-			images: [
-				'/public/images/Sucess/climb_vesko.jpg',
-				'/public/images/Sucess/climb_vesko2.jpg',
-				'/public/images/Sucess/musala_izgrev.jpg',
-				'/public/images/Sucess/musala.jpg'
-			],
+			images: [climb_vesko, climb_vesko2, musala_izgrev],
 
 			showImage: false
 		},
 		{
 			title: 'Attention to Detail - Mountain Photography',
 			content: `Photographing the mountains has fine-tuned my attention to detail, a crucial skill in software development. From capturing the subtle play of light on a landscape to noticing the intricate patterns in the bark of a tree, my photography experience has trained me to observe and appreciate the smallest details. In programming, this has translated into writing cleaner code, catching bugs early, and improving user experience with nuanced improvements. Similarly, both fields require a certain level of creativity. Whether I'm framing a shot or designing a software solution, I constantly strive to bring a unique and creative approach to my work. The patience and perseverance required in capturing the perfect shot mirrors the dedication needed to refine a piece of code, enhancing its efficiency and readability.`,
-			images: [
-				'/public/images/Sucess/ciconia_nigra.jpg',
-				'/public/images/Sucess/real_ciconia.jpg',
-				'/public/images/Sucess/orel.jpg',
-				'/public/images/Sucess/plato.jpg'
-			],
+			images: [ciconia_nigra, real_ciconia, orel, plato],
 
 			showImage: false
 		},
 		{
 			title: 'Sustainability - Mountain Conservation',
 			content: `My interest in mountain conservation has sparked a passion for sustainability, a concept I incorporate into my work and personal life. In coding, this translates into writing efficient, maintainable code and advocating for sustainable tech practices, like reducing energy consumption and electronic waste. I believe that as tech professionals, we have a responsibility to ensure the digital world is as sustainable as the world we want to enjoy while hiking. Beyond code, I aim to foster a sustainable work environment by promoting practices like regular breaks and work-life balance, which I believe contribute to long-term productivity and employee wellness. I am committed to creating software solutions that not only meet the present needs of users but also consider the long-term impact on the environment and society.`,
-			images: [
-				'/public/images/Sucess/rusamski_livadi.jpg',
-				'/public/images/Sucess/beli_vruh.jpg',
-				'/public/images/Sucess/bike.jpg'
-			],
+			images: [rusamski_livadi, beli_vruh, bike],
 
 			showImage: false
 		}
