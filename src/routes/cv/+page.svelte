@@ -62,7 +62,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-image: url('/public/images/cv/cv-background.jpeg');
+		background-image: url('/images/cv/cv-background.jpeg');
 		animation: move 2s linear infinite;
 		z-index: -1;
 		background-size: 100% 100%;
