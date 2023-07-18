@@ -9,6 +9,8 @@
 	import TfLogo from './../../public/images/logos/tf_logo.png';
 	import PandasLogo from './../../public/images/logos/pandas.png';
 
+	let backgroundImage = '/images/Mountains/Vitosha.jpeg';
+
 	let i = 0;
 	let txts = [
 		"I'm Peter Matov, a software engineer and data scientist.",
@@ -46,6 +48,9 @@
 				showAnimation = false; // Stop showing the animation after loading
 			}, 2000); // delay for 2 seconds to simulate loading
 		}
+
+		document.body.style.backgroundImage = `url(${backgroundImage})`;
+		document.body.style.backgroundSize = 'cover';
 	});
 
 	let projects = [
