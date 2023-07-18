@@ -5,8 +5,8 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: netlify(),
-		target: '#svelte'
+		adapter: netlify()
+		// target: '#svelte' // remove this line
 	}
 };
 
