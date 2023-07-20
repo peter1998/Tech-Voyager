@@ -17,7 +17,7 @@
 	let ciconia_nigra = '/images/Sucess/ciconia_nigra.jpg';
 	let real_ciconia = '/images/Sucess/real_ciconia.jpg';
 	let orel = '/images/Sucess/orel.jpg';
-	let plato = '../../../public/images/Sucess/plato.JPG';
+	let plato = '/images/Sucess/beli_vruh.jpg';
 
 	let rusamski_livadi = '/images/Sucess/rusamski_livadi.jpg';
 	let beli_vruh = '/images/Sucess/beli_vruh.jpg';

@@ -2,10 +2,19 @@
 	import { goto } from '$app/navigation';
 	import '@fortawesome/fontawesome-free/css/all.css';
 
-	let isSidebarOpen = false; // Set the initial state to closed
+	let isSidebarOpen = true; // Set the initial state to open
+	let isSidebarHidden = false; // Set the initial state to not hidden
 
 	function toggleSidebar() {
 		isSidebarOpen = !isSidebarOpen;
+	}
+
+	function hideSidebar() {
+		isSidebarHidden = true;
+	}
+
+	function showSidebar() {
+		isSidebarHidden = false;
 	}
 
 	function navigateTo(route: string) {
@@ -14,13 +23,15 @@
 	}
 
 	$: sidebarIcon = isSidebarOpen ? 'fas fa-chevron-left' : 'fas fa-chevron-right';
-	$: sidebarIconStyle = isSidebarOpen ? 'expanded' : 'collapsed';
 </script>
 
-<div class="sidebar-container" class:collapsed={!isSidebarOpen}>
+<div class="sidebar-container" class:collapsed={!isSidebarOpen} class:hidden={isSidebarHidden}>
 	<div class="sidebar-header">
 		<button class="toggle-button" on:click={toggleSidebar}>
 			<i class={sidebarIcon} />
+		</button>
+		<button class="hide-button" on:click={hideSidebar}>
+			<i class="fas fa-times" />
 		</button>
 	</div>
 
@@ -44,6 +55,10 @@
 		</ul>
 	</nav>
 </div>
+
+<button class="show-button" on:click={showSidebar} class:hidden={!isSidebarHidden}>
+	<i class="fas fa-bars" />
+</button>
 
 <style>
 	/* Add some styles to make the sidebar visible */
@@ -84,7 +99,9 @@
 		transition: color 0.3s ease;
 	}
 
-	a:hover {
+	.sidebar-container:hover a,
+	.sidebar-container:hover .toggle-button,
+	.sidebar-container:hover .show-button {
 		color: #fff;
 	}
 
@@ -129,5 +146,38 @@
 
 	.fa-camera {
 		margin-right: 10px; /* Add right margin for spacing */
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.hide-button {
+		background: none;
+		border: none;
+		cursor: pointer;
+		font-size: 20px;
+		color: #333;
+		transition: color 0.3s ease;
+	}
+
+	.hide-button:hover {
+		color: #ff0000;
+	}
+
+	.show-button {
+		position: fixed;
+		left: 0;
+		top: 28%;
+		background-color: #f5f5f5;
+		border: none;
+		color: #333;
+		padding: 10px;
+		cursor: pointer;
+		z-index: 1000;
+	}
+
+	.show-button:hover {
+		color: green;
 	}
 </style>
