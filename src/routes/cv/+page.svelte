@@ -10,9 +10,16 @@
 
 	let images = [meBike, meIztok, yoda];
 	let currentImageIndex = 0;
+	let isAnimationActive = true;
+
+	function toggleAnimation() {
+		isAnimationActive = !isAnimationActive;
+	}
+
+	let interval;
 
 	onMount(() => {
-		const interval = setInterval(() => {
+		interval = setInterval(() => {
 			currentImageIndex = (currentImageIndex + 1) % images.length;
 		}, 3000); // Change image every 3 seconds
 
@@ -22,7 +29,7 @@
 	});
 </script>
 
-<div class="background">
+<div class="background" class:stop={isAnimationActive}>
 	<Sidebar />
 
 	<Header />
@@ -39,6 +46,12 @@
 					<span class="dot" class:selected={index === currentImageIndex} />
 				{/each}
 			</div>
+		</div>
+		<div class="animation-control">
+			<button class="animate-btn" on:click={toggleAnimation}>
+				{#if isAnimationActive} Start Animation {/if}
+				{#if !isAnimationActive} Stop Animation {/if}
+			</button>
 		</div>
 	</main>
 </div>
@@ -220,5 +233,40 @@
 			height: auto;
 			padding: 10px;
 		}
+	}
+
+	.background:before {
+		/* Your previous CSS rules... */
+		animation: move 2s linear infinite;
+	}
+
+	.background.stop:before {
+		animation: none;
+	}
+
+	.animate-btn {
+		background: linear-gradient(to right, #36d1dc, #5b86e5); /* gradient colors */
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 50px;
+		transition: transform 0.3s;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* shadow for 3D effect */
+	}
+
+	.animate-btn:hover {
+		transform: scale(1.05);
+		box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* larger shadow on hover */
+	}
+
+	.animate-btn:active {
+		transform: scale(0.95);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* smaller shadow when button is clicked */
 	}
 </style>

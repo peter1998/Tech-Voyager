@@ -28,7 +28,7 @@
 			</div>
 			<div class="contact-item">
 				<h3><FontAwesomeIcon icon={faPhone} /> Phone</h3>
-				<p>+359 - 0888187905</p>
+				<p>+359 888187905</p>
 			</div>
 			<div class="contact-item">
 				<h3><FontAwesomeIcon icon={faEnvelope} /> Email</h3>

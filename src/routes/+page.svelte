@@ -83,8 +83,7 @@
 		<a href="/cv" class="hover:text-gray-300">CV</a>
 		<a href="/contact" class="hover:text-gray-300">Contact</a>
 	</nav>
-	<a href="tel:(359)0888187905" class="text-lg font-semibold hover:text-gray-300 text-white"
-		>(359) 0888187905</a
+	<a href="/contact" class="text-lg font-semibold hover:text-gray-300 text-white">(359) 888187905</a
 	>
 </header>
 
@@ -494,6 +493,22 @@
 
 		.projects ul {
 			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	@media (max-width: 460px) {
+		header {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		header .logo-image {
+			display: none;
+		}
+
+		nav {
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 	}
 </style>

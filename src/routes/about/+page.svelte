@@ -31,9 +31,9 @@
 				<ul>
 					<li>Name: Peter Matov</li>
 					<li>Email: <a href="mailto:pmatov@gmail.com">pmatov@gmail.com</a></li>
-					<li>Phone: (359) - 088818 7905</li>
+					<li>Phone: (359) 88818 7905</li>
 					<li>Date of birth: 19 November 1998</li>
-					<li>Address: Europe Sofia, Bulgaria</li>
+					<li>Address: Sofia, Bulgaria</li>
 					<li>Nationality: Bulgarian</li>
 				</ul>
 			</div>
@@ -65,15 +65,17 @@
 						<div class="col-6 margin-bottom50 margin-top50">
 							<div class="flot-left equal-div">
 								<h5>Technical University of Sofia</h5>
-								<h4>Doctor of Artificial Intelligence, Artificial Intelligence</h4>
-								<span>Mar 2023 - Jul 2027</span>
+								<h4>PhD Student on Artificial Intelligence</h4>
+								<span>March 2023 - July 2027</span>
 							</div>
 						</div>
 						<div class="col-6 margin-bottom50 margin-top50 no-margin-top equal-div">
-							Skills: Deep Learning · Anaconda · Python (Programming Language) · Artificial
-							Intelligence (AI) · Machine Learning
+							<h2 class="bold-section">Skills:</h2>
+							Deep Learning · Anaconda · Python (Programming Language) · Artificial Intelligence (AI)
+							· Machine Learning
 							<br />
-							Activities and societies: Java Script, React.js, React-Native , Web3.0 , Solidity, Ethereum
+							<h2 class="bold-section">Activities and societies</h2>
+							Java Script, React.js, React-Native , Web3.0 , Solidity, Ethereum
 						</div>
 					</div>
 					<div class="full-divider black-border" />
@@ -82,12 +84,13 @@
 							<div class="flot-left equal-div">
 								<h5>Technical University of Sofia</h5>
 								<h4>Master's degree, Computer Software Engineering</h4>
-								<span>Oct 2021 - Aug 2022</span>
+								<span>October 2021 - August 2022</span>
 							</div>
 						</div>
 						<div class="col-6 margin-bottom50 margin-top50 no-margin-top equal-div">
-							Activities and societies: Python Computer Vision, Java Spring Boot Technology, ASP.
-							Net Projects with Full Stack, Semantic Web, Interface of common language
+							<h2 class="bold-section">Activities and societies</h2>
+							Python Computer Vision, Java Spring Boot Technology, ASP. Net Projects with Full Stack,
+							Semantic Web, Interface of common language
 						</div>
 					</div>
 					<div class="full-divider black-border" />
@@ -96,7 +99,7 @@
 							<div class="flot-left equal-div">
 								<h5>Technical University of Sofia</h5>
 								<h4>Bachelor's degree, Telecommunications Technology/Technician</h4>
-								<span>Sep 2017 - Jul 2021</span>
+								<span>September 2017 - July 2021</span>
 							</div>
 						</div>
 						<div class="col-6 margin-bottom50 margin-top50 no-margin-top equal-div">
@@ -790,5 +793,8 @@
 		padding: 2px 5px; /* Adds some padding around the text */
 		border-radius: 5px; /* Makes the background rounded */
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for more 3D effect */
+	}
+	.bold-section {
+		font-weight: bold;
 	}
 </style>
