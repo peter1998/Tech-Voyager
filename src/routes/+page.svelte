@@ -10,6 +10,7 @@
 	import PandasLogo from './../../public/images/logos/pandas.png';
 
 	let backgroundImage = '/images/Mountains/Vitosha.jpeg';
+	let loaderElement;
 
 	let i = 0;
 	let txts = [
@@ -46,7 +47,14 @@
 				loading = false;
 				typeWriter();
 				showAnimation = false; // Stop showing the animation after loading
-			}, 2000); // delay for 2 seconds to simulate loading
+			}, 4000); // delay for 2 seconds to simulate loading
+
+			// Hide the loader after 3 seconds
+			setTimeout(() => {
+				if (loaderElement) {
+					loaderElement.style.display = 'none';
+				}
+			}, 3000);
 		}
 
 		document.body.style.backgroundImage = `url(${backgroundImage})`;
@@ -62,16 +70,9 @@
 		}
 		// Add more projects here...
 	];
-
-	let squares = Array(100).fill(0);
 </script>
 
-<div id="animation" />
-<div class="loader" style="display: {loading ? 'flex' : 'none'};">
-	{#each squares as _, i}
-		<div />
-	{/each}
-</div>
+<div class="loader" bind:this={loaderElement} />
 
 <header class="flex justify-around bg-gray-800 p-6 text-white">
 	<a href="/" class="hover:text-gray-300">
@@ -339,24 +340,9 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		background-color: #333;
+		background: url('/gif/Matrix-1.1s-1084px.gif') center center no-repeat;
+		background-size: cover;
 		z-index: 9999;
-	}
-
-	.loader div {
-		width: 20px;
-		height: 20px;
-		margin: 5px;
-		background-color: #3498db;
-		animation: fade 1.2s infinite;
-	}
-
-	.loader div:nth-child(odd) {
-		animation-delay: 0.6s;
 	}
 
 	.skill-title {
@@ -417,18 +403,6 @@
 	.font-semibold {
 		font-weight: bold;
 		color: #fff;
-	}
-
-	@keyframes fade {
-		0%,
-		100% {
-			opacity: 0.5;
-			transform: scale(0.9);
-		}
-		50% {
-			opacity: 1;
-			transform: scale(1);
-		}
 	}
 
 	@keyframes spin {
