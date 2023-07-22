@@ -30,6 +30,11 @@
 	];
 
 	onMount(() => {
+		const cursorElement = document.createElement('span');
+		cursorElement.innerHTML = '_';
+		cursorElement.style.animation = 'blink 1s step-end infinite';
+		const demoElement = document.getElementById('demo');
+		demoElement.appendChild(cursorElement);
 		if (typeof window !== 'undefined') {
 			function typeWriter() {
 				const demoElement = document.getElementById('demo');
@@ -126,7 +131,7 @@
 			>View My Projects</a
 		>
 		<button class="animation-toggle" on:click={toggleAnimation}>
-			{animationEnabled ? 'Disable' : 'Enable'} Animation
+			{animationEnabled ? 'Freeze' : 'Begin'} Text
 		</button>
 	</section>
 
@@ -481,22 +486,30 @@
 
 	.animation-toggle {
 		display: inline-block;
-		margin: 10px;
+		background: #e0e5ec;
+		border: none;
 		padding: 10px 20px;
-		background-color: #333;
-		color: #fff;
-		text-decoration: none;
-		border-radius: 5px;
-		transition: background-color 0.3s ease;
+		border-radius: 20px;
+
+		color: #333;
+		font-size: 1em;
 		cursor: pointer;
+		outline: none;
+		transition: all 0.3s ease-in-out;
+		transform: scale(1); /* Add this line */
 	}
 
 	.animation-toggle:hover {
-		background-color: #666;
+		box-shadow: 2px 2px 4px #a3b1c6, -2px -2px 4px #ffffff;
+		background: #d1d9e6; /* Add this line */
+		color: #111; /* Add this line */
+		transform: scale(1.05); /* Add this line */
 	}
 
 	.animation-toggle:active {
-		background-color: #999;
+		box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
+		background: #bfc9d6; /* Add this line */
+		color: #000; /* Add this line */
 	}
 
 	@media (max-width: 768px) {
