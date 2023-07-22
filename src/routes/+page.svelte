@@ -1,6 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import { writable } from 'svelte/store';
 
 	import Footer from '$lib/Footer.svelte';
 
@@ -8,9 +9,16 @@
 	import JupyterLogo from './../../public/images/logos/jupyter-logo.png';
 	import TfLogo from './../../public/images/logos/tf_logo.png';
 	import PandasLogo from './../../public/images/logos/pandas.png';
-
 	let backgroundImage = '/images/Mountains/Vitosha.jpeg';
+
 	let loaderElement;
+	let animationEnabled = true;
+	let txtIndex = 0;
+	let speed = 90; /* The speed/duration of the effect in milliseconds */
+	let loading = true;
+	let showAnimation = true; // New variable to control the display of the animation
+	let text = writable('');
+	let sentences = '';
 
 	let i = 0;
 	let txts = [
@@ -20,24 +28,24 @@
 		'Welcome to my personal website where you can learn more',
 		'about my projects, skills and interests.'
 	];
-	let txtIndex = 0;
-	let speed = 90; /* The speed/duration of the effect in milliseconds */
-	let loading = true;
-	let showAnimation = true; // New variable to control the display of the animation
 
 	onMount(() => {
 		if (typeof window !== 'undefined') {
 			function typeWriter() {
 				const demoElement = document.getElementById('demo');
 				if (demoElement) {
-					if (i < txts[txtIndex].length) {
-						demoElement.innerHTML += txts[txtIndex].charAt(i);
+					if (i < txts[txtIndex].length && animationEnabled) {
+						// Update the store instead of modifying the DOM
+						text.update((value) => value + txts[txtIndex].charAt(i));
 						i++;
 						setTimeout(typeWriter, speed);
 					} else {
 						i = 0;
 						txtIndex = (txtIndex + 1) % txts.length;
-						demoElement.innerHTML = '';
+						if (animationEnabled) {
+							// Clear the store instead of modifying the DOM
+							text.set('');
+						}
 						setTimeout(typeWriter, 1000);
 					}
 				}
@@ -70,6 +78,24 @@
 		}
 		// Add more projects here...
 	];
+
+	function toggleAnimation() {
+		animationEnabled = !animationEnabled;
+		const demoElement = document.getElementById('demo');
+		if (!animationEnabled) {
+			sentences = txts.join(' '); // Join all sentences together
+			text.set(sentences); // Display all sentences
+			demoElement.style.whiteSpace = 'normal';
+			demoElement.style.overflow = 'visible';
+		} else {
+			// If the animation is turned back on, clear the store and restart the typing animation
+			text.set('');
+			sentences = ''; // Clear the sentences variable
+			i = 0;
+			demoElement.style.whiteSpace = 'nowrap';
+			demoElement.style.overflow = 'hidden';
+		}
+	}
 </script>
 
 <div class="loader" bind:this={loaderElement} />
@@ -94,11 +120,14 @@
 	>
 		<h1 class="text-4xl mb-4">Hello, I'm Peter Matov</h1>
 		<div class="typing-container text-xl mb-8 mx-auto">
-			<p id="demo" />
+			<p id="demo">{$text}</p>
 		</div>
 		<a href="/projects" class="cta bg-white text-black py-2 px-4 rounded hover:bg-gray-200"
 			>View My Projects</a
 		>
+		<button class="animation-toggle" on:click={toggleAnimation}>
+			{animationEnabled ? 'Disable' : 'Enable'} Animation
+		</button>
 	</section>
 
 	<section class="skills text-center py-20 bg-gray-200 text-gray-800 p-6">
@@ -449,6 +478,27 @@
 		color: gold;
 		transform: scale(1.05);
 	}
+
+	.animation-toggle {
+		display: inline-block;
+		margin: 10px;
+		padding: 10px 20px;
+		background-color: #333;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 5px;
+		transition: background-color 0.3s ease;
+		cursor: pointer;
+	}
+
+	.animation-toggle:hover {
+		background-color: #666;
+	}
+
+	.animation-toggle:active {
+		background-color: #999;
+	}
+
 	@media (max-width: 768px) {
 		.hero h1 {
 			font-size: 2rem;
