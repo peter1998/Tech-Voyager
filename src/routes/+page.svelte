@@ -540,7 +540,8 @@
 		}
 
 		header .logo-image {
-			display: none;
+			height: 50px; /* adjust as needed */
+			width: auto;
 		}
 
 		nav {
