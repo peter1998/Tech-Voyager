@@ -24,7 +24,7 @@
 <Header />
 
 <main>
-	<section>
+	<section class="about-me">
 		<h1>About Me</h1>
 		<div style="display: flex; align-items: center;">
 			<div style="flex: 1;">
@@ -773,6 +773,13 @@
 		}
 	}
 
+	@media screen and (max-width: 600px) {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
 	.progress {
 		position: relative;
 		overflow: visible; /* Allows the percentage to be visible outside the progress bar */
@@ -796,5 +803,50 @@
 	}
 	.bold-section {
 		font-weight: bold;
+	}
+
+	/* Media queries for responsive design */
+	@media (max-width: 576px) {
+		.about-me div {
+			flex-direction: column;
+			align-items: unset;
+		}
+		.about-me div img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	@media (min-width: 577px) and (max-width: 768px) {
+		.about-me div {
+			flex-direction: row;
+			align-items: center;
+		}
+		.about-me div img {
+			width: 75%;
+			height: auto;
+		}
+	}
+
+	@media (min-width: 769px) and (max-width: 992px) {
+		.about-me div {
+			flex-direction: row;
+			align-items: center;
+		}
+		.about-me div img {
+			width: 85%;
+			height: auto;
+		}
+	}
+
+	@media (min-width: 993px) {
+		.about-me div {
+			flex-direction: row;
+			align-items: center;
+		}
+		.about-me div img {
+			width: 100%;
+			height: auto;
+		}
 	}
 </style>
