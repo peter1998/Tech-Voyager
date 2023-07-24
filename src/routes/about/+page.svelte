@@ -821,10 +821,14 @@
 		.about-me div {
 			flex-direction: row;
 			align-items: center;
+			padding: 20px; /* Add padding to each div for more space */
 		}
 		.about-me div img {
 			width: 75%;
 			height: auto;
+		}
+		.about-me .animated-text {
+			word-wrap: break-word; /* Make the animated text wrap to a new line when it's about to overflow */
 		}
 	}
 
