@@ -25,7 +25,7 @@
 			} else {
 				name = '';
 				message = '';
-				successMessage = 'Feedback submitted successfully!';
+				successMessage = 'Thank you for your feedback! We appreciate your time and input.';
 				setTimeout(() => {
 					successMessage = '';
 				}, 5000);
@@ -39,19 +39,29 @@
 	<Sidebar />
 
 	<main>
+		<h1>Feedback Form</h1>
+		<p>
+			We value your feedback! Please let me know what you think about this site or any of my
+			projects.
+		</p>
 		<form on:submit|preventDefault={handleSubmit} class="feedback-form">
 			<label class="checkbox-container">
 				<input type="checkbox" bind:checked={anonymous} />
 				<span class="checkmark" />
-				Submit as Anonymous
+				Submit feedback anonymously (your name will not be associated with your feedback)
 			</label>
 			<label>
 				Name:
-				<input type="text" bind:value={name} placeholder="Anonymous" disabled={anonymous} />
+				<input
+					type="text"
+					bind:value={name}
+					placeholder="Enter your name here"
+					disabled={anonymous}
+				/>
 			</label>
 			<label>
 				Feedback:
-				<textarea bind:value={message} required />
+				<textarea bind:value={message} placeholder="Enter your feedback here" required />
 			</label>
 			<button type="submit">Submit Feedback</button>
 		</form>
@@ -73,9 +83,32 @@
 	main {
 		flex: 1;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding: 20px;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 2.5em; /* Increase font size */
+		font-weight: bold; /* Make text bold */
+		color: #ffffff; /* Change text color to white */
+		background-color: rgba(0, 0, 0, 0.6); /* Add semi-transparent black background */
+		padding: 10px; /* Add some padding */
+		border-radius: 10px; /* Round the corners */
+		margin-bottom: 10px;
+	}
+
+	p {
+		text-align: center;
+		font-size: 1.5em; /* Increase font size */
+		font-weight: bold; /* Make text bold */
+		color: #ffffff; /* Change text color to white */
+		background-color: rgba(0, 0, 0, 0.6); /* Add semi-transparent black background */
+		padding: 10px; /* Add some padding */
+		border-radius: 10px; /* Round the corners */
+		margin-bottom: 20px;
 	}
 
 	.feedback-form {
@@ -119,11 +152,13 @@
 		border-radius: 4px;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
+		margin-top: 10px;
 	}
 
 	.feedback-form button:hover {
 		background-color: #005999;
 	}
+
 	.checkbox-container {
 		display: block;
 		position: relative;
@@ -206,6 +241,48 @@
 		}
 		to {
 			opacity: 0;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		main {
+			padding: 10px;
+		}
+
+		.feedback-form {
+			max-width: 90%;
+		}
+
+		h1 {
+			font-size: 1.5em;
+		}
+
+		p {
+			font-size: 1em;
+		}
+
+		.feedback-form label {
+			font-size: 1em;
+		}
+
+		.feedback-form button {
+			font-size: 1em;
+		}
+
+		.checkbox-container {
+			font-size: 18px;
+		}
+
+		.checkmark {
+			height: 25px;
+			width: 25px;
+		}
+
+		.checkbox-container .checkmark:after {
+			left: 9px;
+			top: 6px;
+			width: 5px;
+			height: 10px;
 		}
 	}
 </style>
