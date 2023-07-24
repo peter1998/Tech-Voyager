@@ -51,6 +51,13 @@
 				</a>
 			</li>
 
+			<li>
+				<a href="/feedback" on:click|preventDefault={() => navigateTo('/feedback')}>
+					<i class="fas fa-comments" />
+					<span>Feedback</span>
+				</a>
+			</li>
+
 			<!-- Add more links here -->
 		</ul>
 	</nav>
@@ -145,6 +152,10 @@
 	}
 
 	.fa-camera {
+		margin-right: 10px; /* Add right margin for spacing */
+	}
+
+	.fa-comments {
 		margin-right: 10px; /* Add right margin for spacing */
 	}
 
