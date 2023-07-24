@@ -627,7 +627,6 @@
 		font-size: 15px;
 		width: 111%;
 		color: #fff;
-		white-space: nowrap;
 		overflow: hidden;
 		transform: translateY(-50%);
 		background: black;
