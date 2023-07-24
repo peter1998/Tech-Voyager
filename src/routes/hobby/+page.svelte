@@ -228,4 +228,28 @@
 		justify-content: space-between;
 		align-items: flex-start;
 	}
+
+	@media screen and (min-width: 601px) and (max-width: 766px) {
+		.section-content-and-image {
+			flex-direction: column;
+			align-items: center;
+		}
+		.section-content,
+		.section-image {
+			margin: 10px 0;
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.section-content-and-image {
+			flex-direction: column;
+			align-items: center;
+		}
+		.section-content,
+		.section-image {
+			margin: 10px 0;
+			width: 100%;
+		}
+	}
 </style>
