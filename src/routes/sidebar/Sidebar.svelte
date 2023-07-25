@@ -40,21 +40,21 @@
 			<li>
 				<a href="/hobby" on:click|preventDefault={() => navigateTo('/hobby')}>
 					<i class="fas fa-hiking" />
-					<span>Explore the Wild Side of Hiking</span>
+					<span class="link-text">Explore the Wild Side of Hiking</span>
 				</a>
 			</li>
 
 			<li>
 				<a href="/trailcameras" on:click|preventDefault={() => navigateTo('/trail-cameras')}>
 					<i class="fas fa-camera" />
-					<span>Trail Cameras Monitoring Wildlife</span>
+					<span class="link-text">Trail Cameras Monitoring Wildlife</span>
 				</a>
 			</li>
 
 			<li>
 				<a href="/feedback" on:click|preventDefault={() => navigateTo('/feedback')}>
 					<i class="fas fa-comments" />
-					<span>Feedback</span>
+					<span class="link-text">Feedback</span>
 				</a>
 			</li>
 
@@ -95,6 +95,7 @@
 	}
 
 	li {
+		list-style-type: none;
 		margin-bottom: 10px;
 	}
 
@@ -104,6 +105,11 @@
 		color: #333;
 		text-decoration: none;
 		transition: color 0.3s ease;
+		padding: 0 10px; /* Add padding to the links */
+	}
+
+	.collapsed a {
+		justify-content: center; /* Center the content of the links when the sidebar is collapsed */
 	}
 
 	.sidebar-container:hover a,
@@ -190,5 +196,14 @@
 
 	.show-button:hover {
 		color: green;
+	}
+
+	.link-text {
+		transition: opacity 0.3s ease; /* Add a transition to the opacity */
+	}
+
+	.collapsed .link-text {
+		opacity: 0; /* Hide the text when the sidebar is collapsed */
+		visibility: hidden; /* This will prevent the text from taking up space */
 	}
 </style>
