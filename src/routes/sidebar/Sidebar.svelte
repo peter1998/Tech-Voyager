@@ -39,21 +39,21 @@
 		<ul>
 			<li>
 				<a href="/hobby" on:click|preventDefault={() => navigateTo('/hobby')}>
-					<i class="fas fa-hiking" />
+					<i class="fas fa-hiking icon" />
 					<span class="link-text">Explore the Wild Side of Hiking</span>
 				</a>
 			</li>
 
 			<li>
 				<a href="/trailcameras" on:click|preventDefault={() => navigateTo('/trail-cameras')}>
-					<i class="fas fa-camera" />
+					<i class="fas fa-camera icon" />
 					<span class="link-text">Trail Cameras Monitoring Wildlife</span>
 				</a>
 			</li>
 
 			<li>
 				<a href="/feedback" on:click|preventDefault={() => navigateTo('/feedback')}>
-					<i class="fas fa-comments" />
+					<i class="fas fa-comments icon" />
 					<span class="link-text">Feedback</span>
 				</a>
 			</li>
@@ -102,10 +102,20 @@
 	a {
 		display: flex;
 		align-items: center;
+		justify-content: start; /* Align the content to the start */
 		color: #333;
 		text-decoration: none;
 		transition: color 0.3s ease;
 		padding: 0 10px; /* Add padding to the links */
+	}
+
+	.icon {
+		margin-right: 10px; /* Add right margin for spacing */
+		transition: margin 0.3s ease; /* Add a transition to the margin */
+	}
+
+	.collapsed .icon {
+		margin-right: 0; /* Remove the right margin when the sidebar is collapsed */
 	}
 
 	.collapsed a {
@@ -153,18 +163,6 @@
 		transform: rotate(180deg);
 	}
 
-	.fa-hiking {
-		margin-right: 10px; /* Add right margin for spacing */
-	}
-
-	.fa-camera {
-		margin-right: 10px; /* Add right margin for spacing */
-	}
-
-	.fa-comments {
-		margin-right: 10px; /* Add right margin for spacing */
-	}
-
 	.hidden {
 		display: none;
 	}
@@ -205,5 +203,11 @@
 	.collapsed .link-text {
 		opacity: 0; /* Hide the text when the sidebar is collapsed */
 		visibility: hidden; /* This will prevent the text from taking up space */
+	}
+
+	.fa-hiking {
+		margin-right: 10px; /* Add right margin for spacing */
+		position: relative;
+		left: -5px; /* Adjust this value as needed */
 	}
 </style>
