@@ -19,11 +19,14 @@
 	import redux from '../../../public/images/logos/redux.png';
 	import materialUi from '../../../public/images/logos/material-ui.png';
 	import Keras from '../../../public/images/logos/keras.png';
+	import ReactBootstrap from '../../../public/images/logos/react-bootstrap.png';
+	import ReactRouter from '../../../public/images/logos/react-router.png';
 
 	import CryptoLearn from '../../../public/images/projects/CryptoLearn.png';
 	import ChestXRayLab from '../../../public/images/projects/ChestXRayLab.png';
 	import CryptoCurrencyMarket from '../../../public/images/projects/Merged_CryptoCurrencyMarket.png';
 	import VendingMaschine from '../../../public/images/projects/vendingMaschine.png';
+	import NexusMatricProducts from '../../../public/images/projects/NexusMatrixProduct.png';
 	import {
 		faYoutube,
 		faFacebook,
@@ -93,6 +96,20 @@
 				{ name: 'Docker', logo: Docker },
 				{ name: 'Material Ui', logo: materialUi },
 				{ name: 'JavaScript', logo: javaScript }
+				// ... other technologies
+			]
+		},
+		{
+			name: 'NexusMatricProducts',
+			description:
+				'A React application that emulates an ecommerce Smart Home products listing page.',
+			url: 'https://github.com/peter1998/NexusProductMatrix',
+			liveUrl: 'https://peter1998.github.io/NexusProductMatrix/', // replace with actual live URL
+			image: NexusMatricProducts, // replace with actual image URL
+			technologies: [
+				{ name: 'React', logo: React },
+				{ name: 'React Router', logo: ReactRouter },
+				{ name: 'React Bootstrap', logo: ReactBootstrap }
 				// ... other technologies
 			]
 		}
